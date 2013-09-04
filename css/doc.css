@@ -1,0 +1,2132 @@
+@charset "CP850";
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800);
+@import url(http://fonts.googleapis.com/css?family=Denk+One);
+@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One);
+/*
+* Front-end  framework Creation for Compass
+* Import _creation.scss
+* Palette colors + typography (golden ratio) + Breakpoints
+*
+*/
+/**
+ * @file
+ * Creation for compass - Front-end framework de  la Diputaci¢ de Tarragona.
+ * @Miguel µngel Ramos. 
+ *
+ */
+/* Compass*/
+/* Creation base */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+/* line 8, ../sass/creation/base/_syntax.scss */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: black;
+  text-shadow: 0 1px white;
+  font-family: Consolas, Monaco, "Andale Mono", monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* line 27, ../sass/creation/base/_syntax.scss */
+::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+/* line 32, ../sass/creation/base/_syntax.scss */
+::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+@media print {
+  /* line 39, ../sass/creation/base/_syntax.scss */
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
+}
+/* Code blocks */
+/* line 45, ../sass/creation/base/_syntax.scss */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+
+/* line 52, ../sass/creation/base/_syntax.scss */
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  /* #FEFA83  #f5f2f0 #FFFBEA #FEFA83;*/
+  background: #FEFA83;
+  border: 1px solid #d2caa7;
+}
+
+/* Inline code */
+/* line 63, ../sass/creation/base/_syntax.scss */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+}
+
+/* line 71, ../sass/creation/base/_syntax.scss */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray;
+}
+
+/* line 75, ../sass/creation/base/_syntax.scss */
+.token.punctuation {
+  color: #999;
+}
+
+/* line 79, ../sass/creation/base/_syntax.scss */
+.namespace {
+  opacity: .7;
+}
+
+/* line 86, ../sass/creation/base/_syntax.scss */
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number {
+  color: #905;
+}
+
+/* line 92, ../sass/creation/base/_syntax.scss */
+.token.selector,
+.token.attr-name,
+.token.string {
+  color: #690;
+}
+
+/* line 100, ../sass/creation/base/_syntax.scss */
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* line 107, ../sass/creation/base/_syntax.scss */
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a;
+}
+
+/* line 113, ../sass/creation/base/_syntax.scss */
+.token.regex,
+.token.important {
+  color: #e90;
+}
+
+/* line 117, ../sass/creation/base/_syntax.scss */
+.token.important {
+  font-weight: bold;
+}
+
+/* line 121, ../sass/creation/base/_syntax.scss */
+.token.entity {
+  cursor: help;
+}
+
+/* line 124, ../sass/creation/base/_syntax.scss */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+
+/* line 129, ../sass/creation/base/_syntax.scss */
+.line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  /* Same as .prisms padding-top */
+  background: rgba(153, 122, 102, 0.08);
+  background: -moz-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: -webkit-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: -o-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+/* line 149, ../sass/creation/base/_syntax.scss */
+.line-highlight:before,
+.line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 0.5em;
+  background-color: rgba(153, 122, 102, 0.4);
+  color: #f5f2f0;
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+/* line 166, ../sass/creation/base/_syntax.scss */
+.line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}
+
+/* line 171, ../sass/creation/base/_syntax.scss */
+pre.line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+/* line 177, ../sass/creation/base/_syntax.scss */
+pre.line-numbers > code {
+  position: relative;
+}
+
+/* line 181, ../sass/creation/base/_syntax.scss */
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em;
+  /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #999999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 198, ../sass/creation/base/_syntax.scss */
+.line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+}
+
+/* line 204, ../sass/creation/base/_syntax.scss */
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+
+/**
+* 	Palette colors
+*   Night Pencil + Magic + yummi-turquoise + J Peterman Shirt + winter morning
+*	Functions colors Sass:
+*	http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html	
+*/
+/*
+lighten($color, $amount)
+darken($color, $amount)
+saturate($color, $amount)
+desaturate($color, $amount)
+grayscale($color)
+invert($color)
+*/
+/* Night Pencil */
+/* Magic */
+/* yummi-turquoise */
+/* J Peterman Shirt */
+/* winter morning */
+/* Tonalitats */
+/**
+*	Typografia  web-fonts
+* 	http://www.google.com/fonts
+*	Imports + Golden ratio + responsive typography
+*/
+/* Imports */
+/* Variables */
+/*Contingut*/
+/*Headings*/
+/* Especial*/
+/* Calculator Golden Ratio Golden Ratio http://www.pearsonified.com/typography/ */
+/*15px*/
+/*25px*/
+/*size*/
+/*line-height*/
+/*size*/
+/*line-height*/
+/*size*/
+/*line-height*/
+/*size*/
+/*line-height*/
+/*size*/
+/*line-height*/
+/*size*/
+/*line-height*/
+/* Creation custom*/
+/**
+*	Typografia  - Creation
+* 	http://www.google.com/fonts
+*	Imports + Golden ratio + responsive typography
+* 	$font-a;contingut + $font-b;Headings + $font-c; especial
+*/
+/* line 10, ../sass/creation/custom/_typography.scss */
+p, #s2 .slider-home .info-banner .text-banner {
+  font-weight: 300;
+}
+
+/* line 11, ../sass/creation/custom/_typography.scss */
+a {
+  color: #0083a9;
+  text-decoration: none;
+}
+
+/* line 12, ../sass/creation/custom/_typography.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Headings*/
+/* line 15, ../sass/creation/custom/_typography.scss */
+h1 {
+  /*body*/
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 3.5rem;
+  letter-spacing: -0.2rem;
+}
+
+/* line 16, ../sass/creation/custom/_typography.scss */
+h2 {
+  font-size: 2.7rem;
+  font-weight: 400;
+  line-height: 3.25rem;
+  letter-spacing: -0.06rem;
+}
+
+/* line 17, ../sass/creation/custom/_typography.scss */
+h3, h2.title-doc {
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 2.75rem;
+  letter-spacing: -0.06rem;
+}
+
+/* line 18, ../sass/creation/custom/_typography.scss */
+h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  letter-spacing: -0.06rem;
+}
+
+/* line 19, ../sass/creation/custom/_typography.scss */
+h5 {
+  font-size: 1.245rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: -0.06rem;
+}
+
+/* line 20, ../sass/creation/custom/_typography.scss */
+h6, #s2 .dipta-caption {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  letter-spacing: -0.06rem;
+}
+
+/* Paragraph size h1,h2,h3,h4,h5.h6*/
+/* line 24, ../sass/creation/custom/_typography.scss */
+#s1 .paragraph p:nth-child(1), #s1 .paragraph #s2 .slider-home .info-banner .text-banner:nth-child(1), #s2 .slider-home .info-banner #s1 .paragraph .text-banner:nth-child(1) {
+  font-size: 3rem;
+  font-weight: 100;
+  line-height: 4.2rem;
+  letter-spacing: 0;
+}
+
+/* line 25, ../sass/creation/custom/_typography.scss */
+#s1 .quote blockquote:nth-child(2), #s1 .quote blockquote:nth-child(14), #s1 .paragraph p:nth-child(2), #s1 .paragraph #s2 .slider-home .info-banner .text-banner:nth-child(2), #s2 .slider-home .info-banner #s1 .paragraph .text-banner:nth-child(2) {
+  font-size: 2.7rem;
+  font-weight: 100;
+  line-height: 3.9rem;
+  letter-spacing: 0;
+}
+
+/* line 26, ../sass/creation/custom/_typography.scss */
+#s1 .quote blockquote:nth-child(5), #s1 .quote blockquote:nth-child(17), #s1 .paragraph p:nth-child(3), #s1 .paragraph #s2 .slider-home .info-banner .text-banner:nth-child(3), #s2 .slider-home .info-banner #s1 .paragraph .text-banner:nth-child(3) {
+  font-size: 2.25rem;
+  font-weight: 100;
+  line-height: 3.3rem;
+  letter-spacing: 0;
+}
+
+/* line 27, ../sass/creation/custom/_typography.scss */
+#s1 .quote blockquote:nth-child(8), #s1 .quote blockquote:nth-child(23), #s2 .navigation-2 p, #s2 .navigation-2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner .navigation-2 .text-banner, #s1 .quote blockquote:nth-child(20), #s2 .navigation-1 p, #s2 .navigation-1 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner .navigation-1 .text-banner, #s2 .navigation-3 p, #s2 .navigation-3 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner .navigation-3 .text-banner, #s1 .paragraph p:nth-child(4), #s1 .paragraph #s2 .slider-home .info-banner .text-banner:nth-child(4), #s2 .slider-home .info-banner #s1 .paragraph .text-banner:nth-child(4) {
+  font-size: 1.5rem;
+  font-weight: 100;
+  line-height: 2.1rem;
+  letter-spacing: 0;
+}
+
+/* line 28, ../sass/creation/custom/_typography.scss */
+#s1 .quote blockquote:nth-child(11), #s3 .box-1 .bloc p, #s3 .box-1 .bloc #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s3 .box-1 .bloc .text-banner, #s2 .navigation-3 .bloc p, #s3 .box-1 .bloc1 p, #s2 .navigation-3 .bloc .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner .navigation-3 .bloc .text-banner, #s3 .box-1 .bloc1 #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s3 .box-1 .bloc1 .text-banner, #s3 .box-1 .bloc2 p, #s3 .box-1 .bloc2 #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s3 .box-1 .bloc2 .text-banner, #s2 .navigation-2 .bloc p, #s3 .box-2 .bloc p, #s3 .box-3 .bloc p, #s2 .navigation-2 .bloc .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner .navigation-2 .bloc .text-banner, #s3 .box-2 .bloc #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s3 .box-2 .bloc .text-banner, #s3 .box-3 .bloc #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s3 .box-3 .bloc .text-banner, #s6 .bloc1 p, #s6 .bloc2 p, #s6 .bloc3 p, #s6 .bloc4 p, #s6 .bloc1 #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s6 .bloc1 .text-banner, #s6 .bloc2 #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s6 .bloc2 .text-banner, #s6 .bloc3 #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s6 .bloc3 .text-banner, #s6 .bloc4 #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s6 .bloc4 .text-banner, #s2 .navigation-1 .bloc p, #s3 .box-2 .bloc1 p, #s3 .box-3 .bloc1 p, #s2 .navigation-1 .bloc .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner .navigation-1 .bloc .text-banner, #s3 .box-2 .bloc1 #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s3 .box-2 .bloc1 .text-banner, #s3 .box-3 .bloc1 #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s3 .box-3 .bloc1 .text-banner, #s3 .box-2 .bloc2 p, #s3 .box-3 .bloc2 p, #s3 .box-2 .bloc2 #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s3 .box-2 .bloc2 .text-banner, #s3 .box-3 .bloc2 #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s3 .box-3 .bloc2 .text-banner, .dipta-resum p, .dipta-resum #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner .dipta-resum .text-banner, #s2 .dipta-concatenats, #s1 .paragraph p:nth-child(5), #s1 .paragraph #s2 .slider-home .info-banner .text-banner:nth-child(5), #s2 .slider-home .info-banner #s1 .paragraph .text-banner:nth-child(5) {
+  font-size: 1.245rem;
+  font-weight: 100;
+  line-height: 1.8rem;
+  letter-spacing: 0;
+}
+
+/* line 29, ../sass/creation/custom/_typography.scss */
+#s1 .paragraph p:nth-child(6), #s1 .paragraph #s2 .slider-home .info-banner .text-banner:nth-child(6), #s2 .slider-home .info-banner #s1 .paragraph .text-banner:nth-child(6) {
+  font-size: 1.125rem;
+  font-weight: 100;
+  line-height: 1.65rem;
+  letter-spacing: 0;
+}
+
+/* line 31, ../sass/creation/custom/_typography.scss */
+#s1 .headings-especifics h1, #s1 .headings-especifics h2, #s1 .headings-especifics h3, #s1 .headings-especifics h2.title-doc, #s1 .headings-especifics h4, #s1 .headings-especifics h5 {
+  font-weight: 300;
+}
+
+/* line 32, ../sass/creation/custom/_typography.scss */
+#s2 #dipta-noticia h2, #s2 #dipta-agenda h2, #s6 .bloc1 h2, #s6 .bloc2 h2, #s6 .bloc3 h2, #s6 .bloc4 h2 {
+  padding: 2rem 0 2rem 5rem;
+  margin: 0;
+  background: url("../../images/escut-dipta.png") no-repeat;
+  background-position: 2rem 2.1rem;
+}
+
+/* Blockquotes*/
+/* line 40, ../sass/creation/custom/_typography.scss */
+#s1 .quote blockquote:nth-child(2), #s1 .quote blockquote:nth-child(5), #s1 .quote blockquote:nth-child(8), #s1 .quote blockquote:nth-child(23), #s2 .navigation-2 p, #s2 .navigation-2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner .navigation-2 .text-banner, #s1 .quote blockquote:nth-child(11), #s1 .quote blockquote:nth-child(14), #s1 .quote blockquote:nth-child(17), #s1 .quote blockquote:nth-child(20), #s2 .navigation-1 p, #s2 .navigation-1 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner .navigation-1 .text-banner, #s2 .navigation-3 p, #s2 .navigation-3 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner .navigation-3 .text-banner {
+  border-bottom: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
+}
+
+/* line 41, ../sass/creation/custom/_typography.scss */
+#s1 .quote blockquote:nth-child(14):before, #s1 .quote blockquote:nth-child(17):before, #s1 .quote blockquote:nth-child(20):before, #s2 .navigation-1 p:before, #s2 .navigation-1 .slider-home .info-banner .text-banner:before, #s2 .slider-home .info-banner .navigation-1 .text-banner:before, #s2 .navigation-3 p:before, #s2 .navigation-3 .slider-home .info-banner .text-banner:before, #s2 .slider-home .info-banner .navigation-3 .text-banner:before {
+  display: block;
+  content: "\201C";
+  font-family: Georgia, serif;
+  font-size: 9rem;
+  position: absolute;
+  color: #7a7a7a;
+  margin-left: -45px;
+  margin-top: 25px;
+}
+
+/* line 44, ../sass/creation/custom/_typography.scss */
+#s1 .quote blockquote:nth-child(2) {
+  font-weight: 100;
+  padding: 2.3%;
+}
+
+/* line 45, ../sass/creation/custom/_typography.scss */
+#s1 .quote blockquote:nth-child(5) {
+  font-weight: 100;
+  padding: 2.3%;
+}
+
+/* line 46, ../sass/creation/custom/_typography.scss */
+#s1 .quote blockquote:nth-child(8), #s1 .quote blockquote:nth-child(23), #s2 .navigation-2 p, #s2 .navigation-2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner .navigation-2 .text-banner {
+  font-weight: 100;
+  padding: 2.3%;
+}
+
+/* line 47, ../sass/creation/custom/_typography.scss */
+#s1 .quote blockquote:nth-child(11) {
+  font-weight: 100;
+  padding: 2.3%;
+}
+
+/* line 50, ../sass/creation/custom/_typography.scss */
+#s1 .quote blockquote:nth-child(14) {
+  font-weight: 100;
+  margin-left: 5%;
+  padding: 2.3% 2.3% 2.3% 5.3%;
+}
+
+/* line 54, ../sass/creation/custom/_typography.scss */
+#s1 .quote blockquote:nth-child(17) {
+  font-weight: 100;
+  margin-left: 5%;
+  padding: 2.3% 2.3% 2.3% 5.3%;
+}
+
+/* line 58, ../sass/creation/custom/_typography.scss */
+#s1 .quote blockquote:nth-child(20), #s2 .navigation-1 p, #s2 .navigation-1 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner .navigation-1 .text-banner, #s2 .navigation-3 p, #s2 .navigation-3 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner .navigation-3 .text-banner {
+  font-weight: 100;
+  margin-left: 5%;
+  padding: 2.3% 2.3% 2.3% 5.3%;
+}
+
+/* Box quotes */
+/*
+*	Elements - Creation
+*	
+*/
+/* Element Clear */
+/* line 8, ../sass/creation/custom/_elements.scss */
+.dipta-clear, .dipta-resum:after, #s2 #dipta-noticia .contingut:after, #s2 #dipta-agenda .contingut:after, #s6 .bloc1 .contingut:after, #s6 .bloc2 .contingut:after, #s6 .bloc3 .contingut:after, #s6 .bloc4 .contingut:after, #s2 .dipta-body:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* Element box*/
+/* line 13, ../sass/creation/custom/_elements.scss */
+#s2 #dipta-noticia h2, #s2 #dipta-agenda h2, #s6 .bloc1 h2, #s6 .bloc2 h2, #s6 .bloc3 h2, #s6 .bloc4 h2, #s2 .navigation-2 .bloc h1, #s3 .box-2 .bloc h1, #s3 .box-3 .bloc h1, #s2 .navigation-2 .bloc h2, #s3 .box-2 .bloc h2, #s3 .box-3 .bloc h2, #s2 .navigation-2 .bloc h3, #s3 .box-2 .bloc h3, #s3 .box-3 .bloc h3, #s2 .navigation-2 .bloc h2.title-doc, #s3 .box-2 .bloc h2.title-doc, #s3 .box-3 .bloc h2.title-doc, #s2 .navigation-2 .bloc h4, #s3 .box-2 .bloc h4, #s3 .box-3 .bloc h4, #s2 .navigation-2 .bloc h5, #s3 .box-2 .bloc h5, #s3 .box-3 .bloc h5, #s2 .navigation-2 .bloc h6, #s3 .box-2 .bloc h6, #s3 .box-3 .bloc h6, #s2 .navigation-2 .bloc .dipta-caption, #s3 .box-2 .bloc #s2 .dipta-caption, #s2 #s3 .box-2 .bloc .dipta-caption, #s3 .box-3 .bloc #s2 .dipta-caption, #s2 #s3 .box-3 .bloc .dipta-caption, #s2 .navigation-1 .bloc h1, #s3 .box-2 .bloc1 h1, #s3 .box-3 .bloc1 h1, #s2 .navigation-1 .bloc h2, #s3 .box-2 .bloc1 h2, #s3 .box-3 .bloc1 h2, #s2 .navigation-1 .bloc h3, #s3 .box-2 .bloc1 h3, #s3 .box-3 .bloc1 h3, #s2 .navigation-1 .bloc h2.title-doc, #s3 .box-2 .bloc1 h2.title-doc, #s3 .box-3 .bloc1 h2.title-doc, #s2 .navigation-1 .bloc h4, #s3 .box-2 .bloc1 h4, #s3 .box-3 .bloc1 h4, #s2 .navigation-1 .bloc h5, #s3 .box-2 .bloc1 h5, #s3 .box-3 .bloc1 h5, #s2 .navigation-1 .bloc h6, #s3 .box-2 .bloc1 h6, #s3 .box-3 .bloc1 h6, #s2 .navigation-1 .bloc .dipta-caption, #s3 .box-2 .bloc1 #s2 .dipta-caption, #s2 #s3 .box-2 .bloc1 .dipta-caption, #s3 .box-3 .bloc1 #s2 .dipta-caption, #s2 #s3 .box-3 .bloc1 .dipta-caption, #s3 .box-2 .bloc2 h1, #s3 .box-3 .bloc2 h1, #s3 .box-2 .bloc2 h2, #s3 .box-3 .bloc2 h2, #s3 .box-2 .bloc2 h3, #s3 .box-3 .bloc2 h3, #s3 .box-2 .bloc2 h2.title-doc, #s3 .box-3 .bloc2 h2.title-doc, #s3 .box-2 .bloc2 h4, #s3 .box-3 .bloc2 h4, #s3 .box-2 .bloc2 h5, #s3 .box-3 .bloc2 h5, #s3 .box-2 .bloc2 h6, #s3 .box-3 .bloc2 h6, #s3 .box-2 .bloc2 #s2 .dipta-caption, #s2 #s3 .box-2 .bloc2 .dipta-caption, #s3 .box-3 .bloc2 #s2 .dipta-caption, #s2 #s3 .box-3 .bloc2 .dipta-caption {
+  border-top: 0.4rem solid #0083a9;
+}
+
+/* line 14, ../sass/creation/custom/_elements.scss */
+#s3 .box-1 .bloc h1, #s3 .box-1 .bloc h2, #s3 .box-1 .bloc h3, #s3 .box-1 .bloc h2.title-doc, #s3 .box-1 .bloc h4, #s3 .box-1 .bloc h5, #s3 .box-1 .bloc h6, #s3 .box-1 .bloc #s2 .dipta-caption, #s2 #s3 .box-1 .bloc .dipta-caption, #s2 .navigation-3 .bloc h1, #s3 .box-1 .bloc1 h1, #s2 .navigation-3 .bloc h2, #s3 .box-1 .bloc1 h2, #s2 .navigation-3 .bloc h3, #s3 .box-1 .bloc1 h3, #s2 .navigation-3 .bloc h2.title-doc, #s3 .box-1 .bloc1 h2.title-doc, #s2 .navigation-3 .bloc h4, #s3 .box-1 .bloc1 h4, #s2 .navigation-3 .bloc h5, #s3 .box-1 .bloc1 h5, #s2 .navigation-3 .bloc h6, #s3 .box-1 .bloc1 h6, #s2 .navigation-3 .bloc .dipta-caption, #s3 .box-1 .bloc1 #s2 .dipta-caption, #s2 #s3 .box-1 .bloc1 .dipta-caption, #s3 .box-1 .bloc2 h1, #s3 .box-1 .bloc2 h2, #s3 .box-1 .bloc2 h3, #s3 .box-1 .bloc2 h2.title-doc, #s3 .box-1 .bloc2 h4, #s3 .box-1 .bloc2 h5, #s3 .box-1 .bloc2 h6, #s3 .box-1 .bloc2 #s2 .dipta-caption, #s2 #s3 .box-1 .bloc2 .dipta-caption, #s2 .navigation-2 .bloc h1, #s3 .box-2 .bloc h1, #s3 .box-3 .bloc h1, #s2 .navigation-2 .bloc h2, #s3 .box-2 .bloc h2, #s3 .box-3 .bloc h2, #s2 .navigation-2 .bloc h3, #s3 .box-2 .bloc h3, #s3 .box-3 .bloc h3, #s2 .navigation-2 .bloc h2.title-doc, #s3 .box-2 .bloc h2.title-doc, #s3 .box-3 .bloc h2.title-doc, #s2 .navigation-2 .bloc h4, #s3 .box-2 .bloc h4, #s3 .box-3 .bloc h4, #s2 .navigation-2 .bloc h5, #s3 .box-2 .bloc h5, #s3 .box-3 .bloc h5, #s2 .navigation-2 .bloc h6, #s3 .box-2 .bloc h6, #s3 .box-3 .bloc h6, #s2 .navigation-2 .bloc .dipta-caption, #s3 .box-2 .bloc #s2 .dipta-caption, #s2 #s3 .box-2 .bloc .dipta-caption, #s3 .box-3 .bloc #s2 .dipta-caption, #s2 #s3 .box-3 .bloc .dipta-caption, #s6 .bloc1 h2, #s6 .bloc2 h2, #s6 .bloc3 h2, #s6 .bloc4 h2, #s2 .navigation-1 .bloc h1, #s3 .box-2 .bloc1 h1, #s3 .box-3 .bloc1 h1, #s2 .navigation-1 .bloc h2, #s3 .box-2 .bloc1 h2, #s3 .box-3 .bloc1 h2, #s2 .navigation-1 .bloc h3, #s3 .box-2 .bloc1 h3, #s3 .box-3 .bloc1 h3, #s2 .navigation-1 .bloc h2.title-doc, #s3 .box-2 .bloc1 h2.title-doc, #s3 .box-3 .bloc1 h2.title-doc, #s2 .navigation-1 .bloc h4, #s3 .box-2 .bloc1 h4, #s3 .box-3 .bloc1 h4, #s2 .navigation-1 .bloc h5, #s3 .box-2 .bloc1 h5, #s3 .box-3 .bloc1 h5, #s2 .navigation-1 .bloc h6, #s3 .box-2 .bloc1 h6, #s3 .box-3 .bloc1 h6, #s2 .navigation-1 .bloc .dipta-caption, #s3 .box-2 .bloc1 #s2 .dipta-caption, #s2 #s3 .box-2 .bloc1 .dipta-caption, #s3 .box-3 .bloc1 #s2 .dipta-caption, #s2 #s3 .box-3 .bloc1 .dipta-caption, #s3 .box-2 .bloc2 h1, #s3 .box-3 .bloc2 h1, #s3 .box-2 .bloc2 h2, #s3 .box-3 .bloc2 h2, #s3 .box-2 .bloc2 h3, #s3 .box-3 .bloc2 h3, #s3 .box-2 .bloc2 h2.title-doc, #s3 .box-3 .bloc2 h2.title-doc, #s3 .box-2 .bloc2 h4, #s3 .box-3 .bloc2 h4, #s3 .box-2 .bloc2 h5, #s3 .box-3 .bloc2 h5, #s3 .box-2 .bloc2 h6, #s3 .box-3 .bloc2 h6, #s3 .box-2 .bloc2 #s2 .dipta-caption, #s2 #s3 .box-2 .bloc2 .dipta-caption, #s3 .box-3 .bloc2 #s2 .dipta-caption, #s2 #s3 .box-3 .bloc2 .dipta-caption {
+  border-bottom: 0.4rem solid white;
+}
+
+/* line 17, ../sass/creation/custom/_elements.scss */
+#s3 .box-1 .bloc {
+  background-color: #f0f7f9;
+}
+/* line 18, ../sass/creation/custom/_elements.scss */
+#s3 .box-1 .bloc h1, #s3 .box-1 .bloc h2, #s3 .box-1 .bloc h3, #s3 .box-1 .bloc h2.title-doc, #s3 .box-1 .bloc h4, #s3 .box-1 .bloc h5, #s3 .box-1 .bloc h6, #s3 .box-1 .bloc #s2 .dipta-caption, #s2 #s3 .box-1 .bloc .dipta-caption {
+  padding: 2rem;
+}
+/* line 19, ../sass/creation/custom/_elements.scss */
+#s3 .box-1 .bloc p, #s3 .box-1 .bloc #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s3 .box-1 .bloc .text-banner {
+  padding: 0 2rem 2rem 2rem;
+  border: 0;
+}
+
+/* line 22, ../sass/creation/custom/_elements.scss */
+#s2 .navigation-3 .bloc, #s3 .box-1 .bloc1 {
+  background-color: #ebebeb;
+}
+/* line 24, ../sass/creation/custom/_elements.scss */
+#s2 .navigation-3 .bloc h1, #s3 .box-1 .bloc1 h1, #s2 .navigation-3 .bloc h2, #s3 .box-1 .bloc1 h2, #s2 .navigation-3 .bloc h3, #s3 .box-1 .bloc1 h3, #s2 .navigation-3 .bloc h2.title-doc, #s3 .box-1 .bloc1 h2.title-doc, #s2 .navigation-3 .bloc h4, #s3 .box-1 .bloc1 h4, #s2 .navigation-3 .bloc h5, #s3 .box-1 .bloc1 h5, #s2 .navigation-3 .bloc h6, #s3 .box-1 .bloc1 h6, #s2 .navigation-3 .bloc .dipta-caption, #s3 .box-1 .bloc1 #s2 .dipta-caption, #s2 #s3 .box-1 .bloc1 .dipta-caption {
+  padding: 2rem;
+}
+/* line 25, ../sass/creation/custom/_elements.scss */
+#s2 .navigation-3 .bloc p, #s3 .box-1 .bloc1 p, #s2 .navigation-3 .bloc .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner .navigation-3 .bloc .text-banner, #s3 .box-1 .bloc1 #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s3 .box-1 .bloc1 .text-banner {
+  padding: 0 2rem 2rem 2rem;
+  border: 0;
+  color: #014b60;
+}
+
+/* line 28, ../sass/creation/custom/_elements.scss */
+#s3 .box-1 .bloc2 {
+  background-color: #ebebeb;
+}
+/* line 30, ../sass/creation/custom/_elements.scss */
+#s3 .box-1 .bloc2 h1, #s3 .box-1 .bloc2 h2, #s3 .box-1 .bloc2 h3, #s3 .box-1 .bloc2 h2.title-doc, #s3 .box-1 .bloc2 h4, #s3 .box-1 .bloc2 h5, #s3 .box-1 .bloc2 h6, #s3 .box-1 .bloc2 #s2 .dipta-caption, #s2 #s3 .box-1 .bloc2 .dipta-caption {
+  padding: 2rem;
+  background-color: #f0f7f9;
+}
+/* line 31, ../sass/creation/custom/_elements.scss */
+#s3 .box-1 .bloc2 p, #s3 .box-1 .bloc2 #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s3 .box-1 .bloc2 .text-banner {
+  padding: 0 2rem 2rem 2rem;
+  border: 0;
+  background-color: #ebebeb;
+}
+
+/* line 34, ../sass/creation/custom/_elements.scss */
+#s2 .navigation-2 .bloc, #s3 .box-2 .bloc, #s3 .box-3 .bloc {
+  background-color: #f0f7f9;
+}
+/* line 36, ../sass/creation/custom/_elements.scss */
+#s2 .navigation-2 .bloc h1, #s3 .box-2 .bloc h1, #s3 .box-3 .bloc h1, #s2 .navigation-2 .bloc h2, #s3 .box-2 .bloc h2, #s3 .box-3 .bloc h2, #s2 .navigation-2 .bloc h3, #s3 .box-2 .bloc h3, #s3 .box-3 .bloc h3, #s2 .navigation-2 .bloc h2.title-doc, #s3 .box-2 .bloc h2.title-doc, #s3 .box-3 .bloc h2.title-doc, #s2 .navigation-2 .bloc h4, #s3 .box-2 .bloc h4, #s3 .box-3 .bloc h4, #s2 .navigation-2 .bloc h5, #s3 .box-2 .bloc h5, #s3 .box-3 .bloc h5, #s2 .navigation-2 .bloc h6, #s3 .box-2 .bloc h6, #s3 .box-3 .bloc h6, #s2 .navigation-2 .bloc .dipta-caption, #s3 .box-2 .bloc #s2 .dipta-caption, #s2 #s3 .box-2 .bloc .dipta-caption, #s3 .box-3 .bloc #s2 .dipta-caption, #s2 #s3 .box-3 .bloc .dipta-caption {
+  padding: 2rem;
+}
+/* line 37, ../sass/creation/custom/_elements.scss */
+#s2 .navigation-2 .bloc p, #s3 .box-2 .bloc p, #s3 .box-3 .bloc p, #s2 .navigation-2 .bloc .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner .navigation-2 .bloc .text-banner, #s3 .box-2 .bloc #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s3 .box-2 .bloc .text-banner, #s3 .box-3 .bloc #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s3 .box-3 .bloc .text-banner {
+  padding: 0 2rem 2rem 2rem;
+  border: 0;
+}
+
+/* line 40, ../sass/creation/custom/_elements.scss */
+#s6 .bloc1, #s6 .bloc2, #s6 .bloc3, #s6 .bloc4 {
+  background-color: #014b60;
+}
+/* line 42, ../sass/creation/custom/_elements.scss */
+#s6 .bloc1 h2, #s6 .bloc2 h2, #s6 .bloc3 h2, #s6 .bloc4 h2 {
+  padding: 2rem;
+  color: #0083a9;
+}
+/* line 43, ../sass/creation/custom/_elements.scss */
+#s6 .bloc1 p, #s6 .bloc2 p, #s6 .bloc3 p, #s6 .bloc4 p, #s6 .bloc1 #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s6 .bloc1 .text-banner, #s6 .bloc2 #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s6 .bloc2 .text-banner, #s6 .bloc3 #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s6 .bloc3 .text-banner, #s6 .bloc4 #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s6 .bloc4 .text-banner {
+  padding: 0 2rem 2rem 2rem;
+  border: 0;
+}
+
+/* line 45, ../sass/creation/custom/_elements.scss */
+#s2 .navigation-1 .bloc, #s3 .box-2 .bloc1, #s3 .box-3 .bloc1 {
+  background-color: #ebebeb;
+}
+/* line 47, ../sass/creation/custom/_elements.scss */
+#s2 .navigation-1 .bloc h1, #s3 .box-2 .bloc1 h1, #s3 .box-3 .bloc1 h1, #s2 .navigation-1 .bloc h2, #s3 .box-2 .bloc1 h2, #s3 .box-3 .bloc1 h2, #s2 .navigation-1 .bloc h3, #s3 .box-2 .bloc1 h3, #s3 .box-3 .bloc1 h3, #s2 .navigation-1 .bloc h2.title-doc, #s3 .box-2 .bloc1 h2.title-doc, #s3 .box-3 .bloc1 h2.title-doc, #s2 .navigation-1 .bloc h4, #s3 .box-2 .bloc1 h4, #s3 .box-3 .bloc1 h4, #s2 .navigation-1 .bloc h5, #s3 .box-2 .bloc1 h5, #s3 .box-3 .bloc1 h5, #s2 .navigation-1 .bloc h6, #s3 .box-2 .bloc1 h6, #s3 .box-3 .bloc1 h6, #s2 .navigation-1 .bloc .dipta-caption, #s3 .box-2 .bloc1 #s2 .dipta-caption, #s2 #s3 .box-2 .bloc1 .dipta-caption, #s3 .box-3 .bloc1 #s2 .dipta-caption, #s2 #s3 .box-3 .bloc1 .dipta-caption {
+  padding: 2rem;
+}
+/* line 48, ../sass/creation/custom/_elements.scss */
+#s2 .navigation-1 .bloc p, #s3 .box-2 .bloc1 p, #s3 .box-3 .bloc1 p, #s2 .navigation-1 .bloc .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner .navigation-1 .bloc .text-banner, #s3 .box-2 .bloc1 #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s3 .box-2 .bloc1 .text-banner, #s3 .box-3 .bloc1 #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s3 .box-3 .bloc1 .text-banner {
+  padding: 0 2rem 2rem 2rem;
+  border: 0;
+  color: #014b60;
+}
+
+/* line 51, ../sass/creation/custom/_elements.scss */
+#s3 .box-2 .bloc2, #s3 .box-3 .bloc2 {
+  background-color: #ebebeb;
+}
+/* line 53, ../sass/creation/custom/_elements.scss */
+#s3 .box-2 .bloc2 h1, #s3 .box-3 .bloc2 h1, #s3 .box-2 .bloc2 h2, #s3 .box-3 .bloc2 h2, #s3 .box-2 .bloc2 h3, #s3 .box-3 .bloc2 h3, #s3 .box-2 .bloc2 h2.title-doc, #s3 .box-3 .bloc2 h2.title-doc, #s3 .box-2 .bloc2 h4, #s3 .box-3 .bloc2 h4, #s3 .box-2 .bloc2 h5, #s3 .box-3 .bloc2 h5, #s3 .box-2 .bloc2 h6, #s3 .box-3 .bloc2 h6, #s3 .box-2 .bloc2 #s2 .dipta-caption, #s2 #s3 .box-2 .bloc2 .dipta-caption, #s3 .box-3 .bloc2 #s2 .dipta-caption, #s2 #s3 .box-3 .bloc2 .dipta-caption {
+  padding: 2rem;
+  background-color: #f0f7f9;
+}
+/* line 54, ../sass/creation/custom/_elements.scss */
+#s3 .box-2 .bloc2 p, #s3 .box-3 .bloc2 p, #s3 .box-2 .bloc2 #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s3 .box-2 .bloc2 .text-banner, #s3 .box-3 .bloc2 #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner #s3 .box-3 .bloc2 .text-banner {
+  padding: 0 2rem 2rem 2rem;
+  border: 0;
+  background-color: #ebebeb;
+}
+
+/* Element dipta-resum */
+/* line 63, ../sass/creation/custom/_elements.scss */
+.dipta-resum h1, .dipta-resum h2, .dipta-resum h3, .dipta-resum h2.title-doc, .dipta-resum h4, .dipta-resum h5 {
+  margin: 5px 0 5px 0;
+  font-weight: 600;
+}
+/* line 64, ../sass/creation/custom/_elements.scss */
+.dipta-resum p, .dipta-resum #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner .dipta-resum .text-banner {
+  margin: 5px 0 5px 0;
+  padding: 0;
+}
+/* line 65, ../sass/creation/custom/_elements.scss */
+.dipta-resum p:after, .dipta-resum #s2 .slider-home .info-banner .text-banner:after, #s2 .slider-home .info-banner .dipta-resum .text-banner:after {
+  content: " ...";
+  font-weight: 600;
+  color: #0083a9;
+  font-size: 3rem;
+}
+/* line 66, ../sass/creation/custom/_elements.scss */
+.dipta-resum .dipta-resum-float {
+  float: left;
+  margin: 5px 5px 0 0;
+}
+/* line 67, ../sass/creation/custom/_elements.scss */
+.dipta-resum img {
+  margin-bottom: 5px;
+}
+
+/* line 72, ../sass/creation/custom/_elements.scss */
+#s2 #dipta-noticia .contingut, #s2 #dipta-agenda .contingut, #s6 .bloc1 .contingut, #s6 .bloc2 .contingut, #s6 .bloc3 .contingut, #s6 .bloc4 .contingut {
+  background-color: #fff;
+}
+/* line 75, ../sass/creation/custom/_elements.scss */
+#s2 #dipta-noticia .contingut div.dipta-resum, #s2 #dipta-agenda .contingut div.dipta-resum, #s6 .bloc1 .contingut div.dipta-resum, #s6 .bloc2 .contingut div.dipta-resum, #s6 .bloc3 .contingut div.dipta-resum, #s6 .bloc4 .contingut div.dipta-resum {
+  padding: 2rem 2rem 2rem 2rem;
+}
+/* line 76, ../sass/creation/custom/_elements.scss */
+#s2 #dipta-noticia .contingut div.dipta-resum:first-child, #s2 #dipta-agenda .contingut div.dipta-resum:first-child, #s6 .bloc1 .contingut div.dipta-resum:first-child, #s6 .bloc2 .contingut div.dipta-resum:first-child, #s6 .bloc3 .contingut div.dipta-resum:first-child, #s6 .bloc4 .contingut div.dipta-resum:first-child {
+  border-bottom: 0.4rem solid #ebebeb;
+}
+/* line 77, ../sass/creation/custom/_elements.scss */
+#s2 #dipta-noticia .contingut div.dipta-resum + div.dipta-resum, #s2 #dipta-agenda .contingut div.dipta-resum + div.dipta-resum, #s6 .bloc1 .contingut div.dipta-resum + div.dipta-resum, #s6 .bloc2 .contingut div.dipta-resum + div.dipta-resum, #s6 .bloc3 .contingut div.dipta-resum + div.dipta-resum, #s6 .bloc4 .contingut div.dipta-resum + div.dipta-resum {
+  padding-right: 2rem;
+  border-bottom: 0.4rem solid #ebebeb;
+}
+/* line 79, ../sass/creation/custom/_elements.scss */
+#s2 #dipta-noticia .contingut div.dipta-resum:last-child, #s2 #dipta-agenda .contingut div.dipta-resum:last-child, #s6 .bloc1 .contingut div.dipta-resum:last-child, #s6 .bloc2 .contingut div.dipta-resum:last-child, #s6 .bloc3 .contingut div.dipta-resum:last-child, #s6 .bloc4 .contingut div.dipta-resum:last-child {
+  border-bottom: 0!important;
+}
+
+/* Element Conacatenats*/
+/* line 87, ../sass/creation/custom/_elements.scss */
+#s2 .dipta-concatenats {
+  /* separador "|"*/
+}
+/* line 88, ../sass/creation/custom/_elements.scss */
+#s2 .dipta-concatenats .dipta-camp {
+  display: inline-block;
+}
+/* line 88, ../sass/creation/custom/_elements.scss */
+#s2 .dipta-concatenats .dipta-camp span + span {
+  padding-left: 0.5rem;
+}
+/* line 93, ../sass/creation/custom/_elements.scss */
+#s2 .dipta-concatenats div + div:before {
+  content: "|";
+  font-size: 0.8rem;
+  position: relative;
+  top: -2px;
+  padding: 0.5rem;
+}
+
+/* Titles Images */
+/* line 99, ../sass/creation/custom/_elements.scss */
+#s2 .navigation-1 h1 {
+  width: 90%;
+  border-bottom: 1px solid #ebebeb;
+  /*position*/
+  padding: 10px;
+  position: relative;
+  background-color: #fff;
+  margin: -55px 0 0 12px;
+}
+
+/* line 102, ../sass/creation/custom/_elements.scss */
+#s2 .navigation-2 h1 {
+  color: #0083a9;
+  /*position*/
+  padding: 10px;
+  position: relative;
+  background-color: #fff;
+  margin: -70px 0 0 12px;
+}
+
+/* line 105, ../sass/creation/custom/_elements.scss */
+#s2 .navigation-3 h1 {
+  width: 90%;
+  /*position*/
+  padding: 10px;
+  position: relative;
+  background-color: #fff;
+  margin: -55px 0 0 0;
+}
+
+/* line 112, ../sass/creation/custom/_elements.scss */
+#s2 .dipta-img-float {
+  float: left;
+  margin: 0 2rem 2rem 0;
+  outline: 1px solid #ebebeb;
+}
+
+/* line 114, ../sass/creation/custom/_elements.scss */
+#s2 .dipta-caption {
+  background-color: #ebebeb;
+  padding: 5px;
+}
+
+/*
+*	Images - Creation
+* 
+*/
+/*Slider -home */
+/* line 8, ../sass/creation/custom/_images.scss */
+#s2 .slider-home .info-banner {
+  padding: 20px;
+  margin-bottom: 0.5%;
+  background-color: rgba(240, 245, 249, 0.9);
+  width: 251px;
+  height: 141px;
+}
+/* line 12, ../sass/creation/custom/_images.scss */
+#s2 .slider-home .info-banner h2 {
+  color: #0083a9;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+/* line 13, ../sass/creation/custom/_images.scss */
+#s2 .slider-home .info-banner .text-banner {
+  line-height: 1.75rem;
+  margin: 0;
+}
+
+/* line 16, ../sass/creation/custom/_images.scss */
+.btn-slider-left {
+  display: inline-block;
+  height: 36px;
+  width: 144px;
+  background-image: url("../images/bg-slideshowarrowleft.png");
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-align: left;
+  text-indent: -119988px;
+}
+
+/* line 22, ../sass/creation/custom/_images.scss */
+.btn-slider-left:hover {
+  background-image: url("../images/bg-slideshowarrowlefthover.png");
+}
+
+/* line 23, ../sass/creation/custom/_images.scss */
+.btn-slider-rigth {
+  height: 36px;
+  width: 144px;
+  display: inline-block;
+  background-image: url("../images/bg-slideshowarrowright.png");
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-align: left;
+  text-indent: -119988px;
+}
+
+/* line 29, ../sass/creation/custom/_images.scss */
+.btn-slider-rigth:hover {
+  background-image: url("../images/bg-slideshowarrowrighthover.png");
+}
+
+/* line 31, ../sass/creation/custom/_images.scss */
+.dipta-galeria {
+  background-color: #ccc;
+  width: 677px;
+  height: 112;
+}
+/* line 32, ../sass/creation/custom/_images.scss */
+.dipta-galeria img {
+  margin: 1.7rem 1rem 0 2rem;
+}
+
+/*
+*	Navigations- Creation
+*	Menus + breadcrums 
+*
+*/
+/*
+*	Tables - Creation
+*	Menus + breadcrums 
+*
+*/
+/*
+*	Forms - Creation
+*	Menus + breadcrums + box navigations
+*
+*/
+/*Creation layouts*/
+/*
+*
+*	Susy - Creation base
+*   http://www.responsinator.com
+*	http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+*/
+/* Visual Grid Susy for REM 1rem=>10px*/
+/*
+lighten($verd, 20%);darken($verd, 20%);saturate($verd, 10%);desaturate($verd, 10%);grayscale($verd);invert($verd);
+*/
+/* line 26, ../sass/creation/_creation.scss */
+html {
+  color: #464646;
+  /*All*/
+  font-size: 62.5%;
+  /*Typography responsive*/
+}
+@media (max-width: 320px) {
+  /* line 26, ../sass/creation/_creation.scss */
+  html {
+    font-size: 52.5%;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 26, ../sass/creation/_creation.scss */
+  html {
+    font-size: 55.5%;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 26, ../sass/creation/_creation.scss */
+  html {
+    font-size: 58.5%;
+  }
+}
+
+/* line 36, ../sass/creation/_creation.scss */
+body {
+  /*$font1: 'Open Sans', sans-serif;*/
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.3rem;
+  line-height: 2.3rem;
+}
+
+/*Syntax custom*/
+/* line 46, ../sass/creation/_creation.scss */
+code {
+  font-size: 1.2rem;
+  font-family: Consolas,Monaco,"Andale Mono",monospace;
+}
+
+/* line 47, ../sass/creation/_creation.scss */
+pre {
+  overflow-x: scroll !important;
+  overflow-y: scroll !important;
+}
+
+/* Palette colors*/
+/* Night Pencil */
+/* Magic */
+/* yummi-turquoise */
+/* J Peterman Shirt */
+/* winter morning */
+/*Containers*/
+/* line 25, ../sass/doc.scss */
+#s1 .headings-especifics, #s1 .headings-generals, #s1 .links, #s1 .paragraph, #s1 .quote, #s1 .body, #s2 #dipta-noticia .container, #s2 #dipta-agenda .container, #s3 .box-1, #s3 .box-2, #s3 .box-3 {
+  /*max-width: 705px; margin-left: auto; margin-right: auto;*/
+}
+
+/* Header Doc*/
+/* line 50, ../sass/doc.scss */
+header {
+  background-color: #0083a9;
+  padding: 90px 0 10px 0;
+  text-align: center;
+  color: #fff;
+}
+/* line 52, ../sass/doc.scss */
+header .container {
+  *zoom: 1;
+  max-width: 1504px;
+  max-width: 94rem;
+  _width: 1504px;
+  padding-left: 32px;
+  padding-left: 2rem;
+  padding-right: 32px;
+  padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+header .container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 320px) {
+  /* line 52, ../sass/doc.scss */
+  header .container {
+    max-width: 480px;
+    max-width: 30rem;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 52, ../sass/doc.scss */
+  header .container {
+    max-width: 608px;
+    max-width: 38rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 52, ../sass/doc.scss */
+  header .container {
+    max-width: 736px;
+    max-width: 46rem;
+  }
+}
+@media (min-width: 569px) and (max-width: 767px) {
+  /* line 52, ../sass/doc.scss */
+  header .container {
+    max-width: 992px;
+    max-width: 62rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 939px) {
+  /* line 52, ../sass/doc.scss */
+  header .container {
+    max-width: 1376px;
+    max-width: 86rem;
+  }
+}
+@media (min-width: 940px) {
+  /* line 52, ../sass/doc.scss */
+  header .container {
+    max-width: 1504px;
+    max-width: 94rem;
+  }
+}
+/* line 54, ../sass/doc.scss */
+header p, header #s2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner header .text-banner {
+  color: #f0f7f9;
+  line-height: 1.4;
+  font-size: 21px;
+  font-weight: normal;
+}
+/* line 55, ../sass/doc.scss */
+header h1 {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 50px;
+  margin: 20px 0 3px 0;
+  line-height: 5rem;
+}
+/* line 57, ../sass/doc.scss */
+header .btn-down {
+  display: inline-block;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  background-color: transparent;
+  border: 1px solid #f0f7f9;
+  color: #FFFFFF;
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding-bottom: 18px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 18px;
+  transition-delay: 0s;
+  transition-duration: 0.1s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+/* line 65, ../sass/doc.scss */
+header .btn-down:hover {
+  background-color: #fff;
+  color: #0083a9;
+  text-decoration: none;
+}
+/* line 66, ../sass/doc.scss */
+header ul {
+  font-size: 14px;
+  margin-top: 20px;
+  list-style: none;
+  padding: 25px;
+}
+/* line 71, ../sass/doc.scss */
+header ul li {
+  display: inline;
+}
+/* line 72, ../sass/doc.scss */
+header ul li a {
+  color: #f0f7f9;
+  font-weight: normal;
+}
+/* line 73, ../sass/doc.scss */
+header ul li a:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+}
+/* line 75, ../sass/doc.scss */
+header ul li + li {
+  margin-left: 20px;
+}
+
+/* Navigation doc */
+/* line 80, ../sass/doc.scss */
+nav {
+  position: fixed;
+  top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  background-color: #F0F7F9;
+  z-index: 1000;
+}
+/* line 82, ../sass/doc.scss */
+nav ul {
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 84, ../sass/doc.scss */
+nav ul li {
+  display: inline;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+/*Title docs page*/
+/* line 91, ../sass/doc.scss */
+h1.title-doc {
+  padding-top: 80px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 5rem;
+}
+
+/* line 93, ../sass/doc.scss */
+h2.title-doc {
+  background-color: #014b60;
+  padding: 1%;
+  color: #f0f7f9;
+  font-weight: 500;
+}
+
+/* Palette colors*/
+/* line 96, ../sass/doc.scss */
+#palette-colors {
+  list-style: none;
+  padding: 0;
+  /* #464646 #EBEBEB #0083A9 #F0F7F9 #014B60*/
+}
+/* line 98, ../sass/doc.scss */
+#palette-colors li {
+  margin: 3rem 0;
+  color: #ccc;
+  display: inline-block;
+  width: 180px;
+  height: 350px;
+  text-align: center;
+}
+/* line 100, ../sass/doc.scss */
+#palette-colors li i {
+  color: #ccc;
+  display: block;
+  position: relative;
+  font-weight: bold;
+  margin: 0;
+  font-size: 20px;
+}
+/* line 101, ../sass/doc.scss */
+#palette-colors li h5 {
+  padding-top: 30px;
+  margin-bottom: 3px;
+}
+/* line 103, ../sass/doc.scss */
+#palette-colors li:first-child {
+  background-color: #464646;
+}
+/* line 104, ../sass/doc.scss */
+#palette-colors li:nth-child(2) {
+  background-color: #014b60;
+}
+/* line 105, ../sass/doc.scss */
+#palette-colors li:nth-child(3) {
+  background-color: #0083a9;
+}
+/* line 106, ../sass/doc.scss */
+#palette-colors li:nth-child(4) {
+  background-color: #f0f7f9;
+}
+/* line 107, ../sass/doc.scss */
+#palette-colors li:last-child {
+  background-color: #ebebeb;
+}
+
+/* line 110, ../sass/doc.scss */
+#tonalitats {
+  list-style: none;
+  padding: 0;
+}
+/* line 112, ../sass/doc.scss */
+#tonalitats li {
+  margin: 3rem 0;
+  color: #ccc;
+  display: inline-block;
+  width: 180px;
+  height: 350px;
+  text-align: center;
+}
+/* line 114, ../sass/doc.scss */
+#tonalitats li i {
+  color: #ccc;
+  display: block;
+  position: relative;
+  font-weight: bold;
+  margin: 0;
+  font-size: 20px;
+}
+/* line 115, ../sass/doc.scss */
+#tonalitats li h5 {
+  padding-top: 30px;
+  margin-bottom: 3px;
+}
+/* line 117, ../sass/doc.scss */
+#tonalitats li:first-child {
+  background-color: #027292;
+}
+/* line 118, ../sass/doc.scss */
+#tonalitats li:nth-child(2) {
+  background-color: #0286ac;
+}
+/* line 119, ../sass/doc.scss */
+#tonalitats li:nth-child(3) {
+  background-color: #029ac5;
+}
+/* line 120, ../sass/doc.scss */
+#tonalitats li:nth-child(4) {
+  background-color: #02aede;
+}
+/* line 121, ../sass/doc.scss */
+#tonalitats li:last-child {
+  background-color: #03c1f7;
+}
+
+/*typography*/
+/* line 124, ../sass/doc.scss */
+#s1 {
+  *zoom: 1;
+  max-width: 1504px;
+  max-width: 94rem;
+  _width: 1504px;
+  padding-left: 32px;
+  padding-left: 2rem;
+  padding-right: 32px;
+  padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#s1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 320px) {
+  /* line 125, ../sass/doc.scss */
+  #s1 article:hover {
+    max-width: 480px;
+    max-width: 30rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(20%, #d7f9ec), color-stop(20%, #ffffff), color-stop(26.66667%, #ffffff), color-stop(26.66667%, #d7f9ec), color-stop(46.66667%, #d7f9ec), color-stop(46.66667%, #ffffff), color-stop(53.33333%, #ffffff), color-stop(53.33333%, #d7f9ec), color-stop(73.33333%, #d7f9ec), color-stop(73.33333%, #ffffff), color-stop(80.0%, #ffffff), color-stop(80%, #d7f9ec), color-stop(100%, #d7f9ec), color-stop(100%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 20%, #ffffff 20%, #ffffff 26.66667%, #d7f9ec 26.66667%, #d7f9ec 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #d7f9ec 53.33333%, #d7f9ec 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #d7f9ec 80%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 20%, #ffffff 20%, #ffffff 26.66667%, #d7f9ec 26.66667%, #d7f9ec 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #d7f9ec 53.33333%, #d7f9ec 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #d7f9ec 80%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 20%, #ffffff 20%, #ffffff 26.66667%, #d7f9ec 26.66667%, #d7f9ec 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #d7f9ec 53.33333%, #d7f9ec 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #d7f9ec 80%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 20%, #ffffff 20%, #ffffff 26.66667%, #d7f9ec 26.66667%, #d7f9ec 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #d7f9ec 53.33333%, #d7f9ec 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #d7f9ec 80%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 125, ../sass/doc.scss */
+  #s1 article:hover {
+    max-width: 608px;
+    max-width: 38rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(15.78947%, #d7f9ec), color-stop(15.78947%, #ffffff), color-stop(21.05263%, #ffffff), color-stop(21.05263%, #d7f9ec), color-stop(36.84211%, #d7f9ec), color-stop(36.84211%, #ffffff), color-stop(42.10526%, #ffffff), color-stop(42.10526%, #d7f9ec), color-stop(57.89474%, #d7f9ec), color-stop(57.89474%, #ffffff), color-stop(63.15789%, #ffffff), color-stop(63.15789%, #d7f9ec), color-stop(78.94737%, #d7f9ec), color-stop(78.94737%, #ffffff), color-stop(84.21053%, #ffffff), color-stop(84.21053%, #d7f9ec), color-stop(100.0%, #d7f9ec), color-stop(100.0%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #d7f9ec 21.05263%, #d7f9ec 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #d7f9ec 42.10526%, #d7f9ec 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #d7f9ec 63.15789%, #d7f9ec 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #d7f9ec 84.21053%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #d7f9ec 21.05263%, #d7f9ec 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #d7f9ec 42.10526%, #d7f9ec 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #d7f9ec 63.15789%, #d7f9ec 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #d7f9ec 84.21053%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #d7f9ec 21.05263%, #d7f9ec 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #d7f9ec 42.10526%, #d7f9ec 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #d7f9ec 63.15789%, #d7f9ec 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #d7f9ec 84.21053%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #d7f9ec 21.05263%, #d7f9ec 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #d7f9ec 42.10526%, #d7f9ec 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #d7f9ec 63.15789%, #d7f9ec 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #d7f9ec 84.21053%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 125, ../sass/doc.scss */
+  #s1 article:hover {
+    max-width: 736px;
+    max-width: 46rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(13.04348%, #d7f9ec), color-stop(13.04348%, #ffffff), color-stop(17.3913%, #ffffff), color-stop(17.3913%, #d7f9ec), color-stop(30.43478%, #d7f9ec), color-stop(30.43478%, #ffffff), color-stop(34.78261%, #ffffff), color-stop(34.78261%, #d7f9ec), color-stop(47.82609%, #d7f9ec), color-stop(47.82609%, #ffffff), color-stop(52.17391%, #ffffff), color-stop(52.17391%, #d7f9ec), color-stop(65.21739%, #d7f9ec), color-stop(65.21739%, #ffffff), color-stop(69.56522%, #ffffff), color-stop(69.56522%, #d7f9ec), color-stop(82.6087%, #d7f9ec), color-stop(82.6087%, #ffffff), color-stop(86.95652%, #ffffff), color-stop(86.95652%, #d7f9ec), color-stop(100%, #d7f9ec), color-stop(100%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #d7f9ec 17.3913%, #d7f9ec 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #d7f9ec 34.78261%, #d7f9ec 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #d7f9ec 52.17391%, #d7f9ec 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #d7f9ec 69.56522%, #d7f9ec 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #d7f9ec 86.95652%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #d7f9ec 17.3913%, #d7f9ec 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #d7f9ec 34.78261%, #d7f9ec 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #d7f9ec 52.17391%, #d7f9ec 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #d7f9ec 69.56522%, #d7f9ec 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #d7f9ec 86.95652%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #d7f9ec 17.3913%, #d7f9ec 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #d7f9ec 34.78261%, #d7f9ec 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #d7f9ec 52.17391%, #d7f9ec 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #d7f9ec 69.56522%, #d7f9ec 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #d7f9ec 86.95652%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #d7f9ec 17.3913%, #d7f9ec 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #d7f9ec 34.78261%, #d7f9ec 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #d7f9ec 52.17391%, #d7f9ec 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #d7f9ec 69.56522%, #d7f9ec 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #d7f9ec 86.95652%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 569px) and (max-width: 767px) {
+  /* line 125, ../sass/doc.scss */
+  #s1 article:hover {
+    max-width: 992px;
+    max-width: 62rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(9.67742%, #d7f9ec), color-stop(9.67742%, #ffffff), color-stop(12.90323%, #ffffff), color-stop(12.90323%, #d7f9ec), color-stop(22.58065%, #d7f9ec), color-stop(22.58065%, #ffffff), color-stop(25.80645%, #ffffff), color-stop(25.80645%, #d7f9ec), color-stop(35.48387%, #d7f9ec), color-stop(35.48387%, #ffffff), color-stop(38.70968%, #ffffff), color-stop(38.70968%, #d7f9ec), color-stop(48.3871%, #d7f9ec), color-stop(48.3871%, #ffffff), color-stop(51.6129%, #ffffff), color-stop(51.6129%, #d7f9ec), color-stop(61.29032%, #d7f9ec), color-stop(61.29032%, #ffffff), color-stop(64.51613%, #ffffff), color-stop(64.51613%, #d7f9ec), color-stop(74.19355%, #d7f9ec), color-stop(74.19355%, #ffffff), color-stop(77.41935%, #ffffff), color-stop(77.41935%, #d7f9ec), color-stop(87.09677%, #d7f9ec), color-stop(87.09677%, #ffffff), color-stop(90.32258%, #ffffff), color-stop(90.32258%, #d7f9ec), color-stop(100.0%, #d7f9ec), color-stop(100.0%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #d7f9ec 12.90323%, #d7f9ec 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #d7f9ec 25.80645%, #d7f9ec 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #d7f9ec 38.70968%, #d7f9ec 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #d7f9ec 51.6129%, #d7f9ec 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #d7f9ec 64.51613%, #d7f9ec 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #d7f9ec 77.41935%, #d7f9ec 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #d7f9ec 90.32258%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #d7f9ec 12.90323%, #d7f9ec 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #d7f9ec 25.80645%, #d7f9ec 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #d7f9ec 38.70968%, #d7f9ec 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #d7f9ec 51.6129%, #d7f9ec 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #d7f9ec 64.51613%, #d7f9ec 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #d7f9ec 77.41935%, #d7f9ec 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #d7f9ec 90.32258%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #d7f9ec 12.90323%, #d7f9ec 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #d7f9ec 25.80645%, #d7f9ec 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #d7f9ec 38.70968%, #d7f9ec 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #d7f9ec 51.6129%, #d7f9ec 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #d7f9ec 64.51613%, #d7f9ec 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #d7f9ec 77.41935%, #d7f9ec 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #d7f9ec 90.32258%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #d7f9ec 12.90323%, #d7f9ec 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #d7f9ec 25.80645%, #d7f9ec 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #d7f9ec 38.70968%, #d7f9ec 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #d7f9ec 51.6129%, #d7f9ec 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #d7f9ec 64.51613%, #d7f9ec 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #d7f9ec 77.41935%, #d7f9ec 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #d7f9ec 90.32258%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 768px) and (max-width: 939px) {
+  /* line 125, ../sass/doc.scss */
+  #s1 article:hover {
+    max-width: 1376px;
+    max-width: 86rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(6.97674%, #d7f9ec), color-stop(6.97674%, #ffffff), color-stop(9.30233%, #ffffff), color-stop(9.30233%, #d7f9ec), color-stop(16.27907%, #d7f9ec), color-stop(16.27907%, #ffffff), color-stop(18.60465%, #ffffff), color-stop(18.60465%, #d7f9ec), color-stop(25.5814%, #d7f9ec), color-stop(25.5814%, #ffffff), color-stop(27.90698%, #ffffff), color-stop(27.90698%, #d7f9ec), color-stop(34.88372%, #d7f9ec), color-stop(34.88372%, #ffffff), color-stop(37.2093%, #ffffff), color-stop(37.2093%, #d7f9ec), color-stop(44.18605%, #d7f9ec), color-stop(44.18605%, #ffffff), color-stop(46.51163%, #ffffff), color-stop(46.51163%, #d7f9ec), color-stop(53.48837%, #d7f9ec), color-stop(53.48837%, #ffffff), color-stop(55.81395%, #ffffff), color-stop(55.81395%, #d7f9ec), color-stop(62.7907%, #d7f9ec), color-stop(62.7907%, #ffffff), color-stop(65.11628%, #ffffff), color-stop(65.11628%, #d7f9ec), color-stop(72.09302%, #d7f9ec), color-stop(72.09302%, #ffffff), color-stop(74.4186%, #ffffff), color-stop(74.4186%, #d7f9ec), color-stop(81.39535%, #d7f9ec), color-stop(81.39535%, #ffffff), color-stop(83.72093%, #ffffff), color-stop(83.72093%, #d7f9ec), color-stop(90.69767%, #d7f9ec), color-stop(90.69767%, #ffffff), color-stop(93.02326%, #ffffff), color-stop(93.02326%, #d7f9ec), color-stop(100.0%, #d7f9ec), color-stop(100.0%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #d7f9ec 9.30233%, #d7f9ec 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #d7f9ec 18.60465%, #d7f9ec 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #d7f9ec 27.90698%, #d7f9ec 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #d7f9ec 37.2093%, #d7f9ec 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #d7f9ec 46.51163%, #d7f9ec 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #d7f9ec 55.81395%, #d7f9ec 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #d7f9ec 65.11628%, #d7f9ec 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #d7f9ec 74.4186%, #d7f9ec 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #d7f9ec 83.72093%, #d7f9ec 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #d7f9ec 93.02326%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #d7f9ec 9.30233%, #d7f9ec 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #d7f9ec 18.60465%, #d7f9ec 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #d7f9ec 27.90698%, #d7f9ec 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #d7f9ec 37.2093%, #d7f9ec 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #d7f9ec 46.51163%, #d7f9ec 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #d7f9ec 55.81395%, #d7f9ec 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #d7f9ec 65.11628%, #d7f9ec 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #d7f9ec 74.4186%, #d7f9ec 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #d7f9ec 83.72093%, #d7f9ec 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #d7f9ec 93.02326%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #d7f9ec 9.30233%, #d7f9ec 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #d7f9ec 18.60465%, #d7f9ec 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #d7f9ec 27.90698%, #d7f9ec 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #d7f9ec 37.2093%, #d7f9ec 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #d7f9ec 46.51163%, #d7f9ec 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #d7f9ec 55.81395%, #d7f9ec 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #d7f9ec 65.11628%, #d7f9ec 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #d7f9ec 74.4186%, #d7f9ec 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #d7f9ec 83.72093%, #d7f9ec 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #d7f9ec 93.02326%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #d7f9ec 9.30233%, #d7f9ec 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #d7f9ec 18.60465%, #d7f9ec 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #d7f9ec 27.90698%, #d7f9ec 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #d7f9ec 37.2093%, #d7f9ec 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #d7f9ec 46.51163%, #d7f9ec 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #d7f9ec 55.81395%, #d7f9ec 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #d7f9ec 65.11628%, #d7f9ec 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #d7f9ec 74.4186%, #d7f9ec 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #d7f9ec 83.72093%, #d7f9ec 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #d7f9ec 93.02326%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 940px) {
+  /* line 125, ../sass/doc.scss */
+  #s1 article:hover {
+    max-width: 1504px;
+    max-width: 94rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(6.38298%, #d7f9ec), color-stop(6.38298%, #ffffff), color-stop(8.51064%, #ffffff), color-stop(8.51064%, #d7f9ec), color-stop(14.89362%, #d7f9ec), color-stop(14.89362%, #ffffff), color-stop(17.02128%, #ffffff), color-stop(17.02128%, #d7f9ec), color-stop(23.40426%, #d7f9ec), color-stop(23.40426%, #ffffff), color-stop(25.53191%, #ffffff), color-stop(25.53191%, #d7f9ec), color-stop(31.91489%, #d7f9ec), color-stop(31.91489%, #ffffff), color-stop(34.04255%, #ffffff), color-stop(34.04255%, #d7f9ec), color-stop(40.42553%, #d7f9ec), color-stop(40.42553%, #ffffff), color-stop(42.55319%, #ffffff), color-stop(42.55319%, #d7f9ec), color-stop(48.93617%, #d7f9ec), color-stop(48.93617%, #ffffff), color-stop(51.06383%, #ffffff), color-stop(51.06383%, #d7f9ec), color-stop(57.44681%, #d7f9ec), color-stop(57.44681%, #ffffff), color-stop(59.57447%, #ffffff), color-stop(59.57447%, #d7f9ec), color-stop(65.95745%, #d7f9ec), color-stop(65.95745%, #ffffff), color-stop(68.08511%, #ffffff), color-stop(68.08511%, #d7f9ec), color-stop(74.46809%, #d7f9ec), color-stop(74.46809%, #ffffff), color-stop(76.59574%, #ffffff), color-stop(76.59574%, #d7f9ec), color-stop(82.97872%, #d7f9ec), color-stop(82.97872%, #ffffff), color-stop(85.10638%, #ffffff), color-stop(85.10638%, #d7f9ec), color-stop(91.48936%, #d7f9ec), color-stop(91.48936%, #ffffff), color-stop(93.61702%, #ffffff), color-stop(93.61702%, #d7f9ec), color-stop(100%, #d7f9ec), color-stop(100%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #d7f9ec 8.51064%, #d7f9ec 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #d7f9ec 17.02128%, #d7f9ec 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #d7f9ec 25.53191%, #d7f9ec 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #d7f9ec 34.04255%, #d7f9ec 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #d7f9ec 42.55319%, #d7f9ec 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #d7f9ec 51.06383%, #d7f9ec 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #d7f9ec 59.57447%, #d7f9ec 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #d7f9ec 68.08511%, #d7f9ec 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #d7f9ec 76.59574%, #d7f9ec 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #d7f9ec 85.10638%, #d7f9ec 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #d7f9ec 93.61702%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #d7f9ec 8.51064%, #d7f9ec 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #d7f9ec 17.02128%, #d7f9ec 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #d7f9ec 25.53191%, #d7f9ec 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #d7f9ec 34.04255%, #d7f9ec 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #d7f9ec 42.55319%, #d7f9ec 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #d7f9ec 51.06383%, #d7f9ec 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #d7f9ec 59.57447%, #d7f9ec 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #d7f9ec 68.08511%, #d7f9ec 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #d7f9ec 76.59574%, #d7f9ec 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #d7f9ec 85.10638%, #d7f9ec 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #d7f9ec 93.61702%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #d7f9ec 8.51064%, #d7f9ec 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #d7f9ec 17.02128%, #d7f9ec 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #d7f9ec 25.53191%, #d7f9ec 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #d7f9ec 34.04255%, #d7f9ec 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #d7f9ec 42.55319%, #d7f9ec 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #d7f9ec 51.06383%, #d7f9ec 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #d7f9ec 59.57447%, #d7f9ec 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #d7f9ec 68.08511%, #d7f9ec 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #d7f9ec 76.59574%, #d7f9ec 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #d7f9ec 85.10638%, #d7f9ec 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #d7f9ec 93.61702%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #d7f9ec 8.51064%, #d7f9ec 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #d7f9ec 17.02128%, #d7f9ec 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #d7f9ec 25.53191%, #d7f9ec 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #d7f9ec 34.04255%, #d7f9ec 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #d7f9ec 42.55319%, #d7f9ec 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #d7f9ec 51.06383%, #d7f9ec 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #d7f9ec 59.57447%, #d7f9ec 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #d7f9ec 68.08511%, #d7f9ec 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #d7f9ec 76.59574%, #d7f9ec 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #d7f9ec 85.10638%, #d7f9ec 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #d7f9ec 93.61702%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+/* line 129, ../sass/doc.scss */
+#s1 .links a {
+  font-weight: 600;
+}
+
+/*Images sources*/
+/* line 154, ../sass/doc.scss */
+#s2 {
+  *zoom: 1;
+  max-width: 1504px;
+  max-width: 94rem;
+  _width: 1504px;
+  padding-left: 32px;
+  padding-left: 2rem;
+  padding-right: 32px;
+  padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#s2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 320px) {
+  /* line 155, ../sass/doc.scss */
+  #s2 article:hover {
+    max-width: 480px;
+    max-width: 30rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(20%, #d7f9ec), color-stop(20%, #ffffff), color-stop(26.66667%, #ffffff), color-stop(26.66667%, #d7f9ec), color-stop(46.66667%, #d7f9ec), color-stop(46.66667%, #ffffff), color-stop(53.33333%, #ffffff), color-stop(53.33333%, #d7f9ec), color-stop(73.33333%, #d7f9ec), color-stop(73.33333%, #ffffff), color-stop(80.0%, #ffffff), color-stop(80%, #d7f9ec), color-stop(100%, #d7f9ec), color-stop(100%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 20%, #ffffff 20%, #ffffff 26.66667%, #d7f9ec 26.66667%, #d7f9ec 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #d7f9ec 53.33333%, #d7f9ec 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #d7f9ec 80%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 20%, #ffffff 20%, #ffffff 26.66667%, #d7f9ec 26.66667%, #d7f9ec 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #d7f9ec 53.33333%, #d7f9ec 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #d7f9ec 80%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 20%, #ffffff 20%, #ffffff 26.66667%, #d7f9ec 26.66667%, #d7f9ec 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #d7f9ec 53.33333%, #d7f9ec 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #d7f9ec 80%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 20%, #ffffff 20%, #ffffff 26.66667%, #d7f9ec 26.66667%, #d7f9ec 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #d7f9ec 53.33333%, #d7f9ec 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #d7f9ec 80%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 155, ../sass/doc.scss */
+  #s2 article:hover {
+    max-width: 608px;
+    max-width: 38rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(15.78947%, #d7f9ec), color-stop(15.78947%, #ffffff), color-stop(21.05263%, #ffffff), color-stop(21.05263%, #d7f9ec), color-stop(36.84211%, #d7f9ec), color-stop(36.84211%, #ffffff), color-stop(42.10526%, #ffffff), color-stop(42.10526%, #d7f9ec), color-stop(57.89474%, #d7f9ec), color-stop(57.89474%, #ffffff), color-stop(63.15789%, #ffffff), color-stop(63.15789%, #d7f9ec), color-stop(78.94737%, #d7f9ec), color-stop(78.94737%, #ffffff), color-stop(84.21053%, #ffffff), color-stop(84.21053%, #d7f9ec), color-stop(100.0%, #d7f9ec), color-stop(100.0%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #d7f9ec 21.05263%, #d7f9ec 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #d7f9ec 42.10526%, #d7f9ec 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #d7f9ec 63.15789%, #d7f9ec 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #d7f9ec 84.21053%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #d7f9ec 21.05263%, #d7f9ec 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #d7f9ec 42.10526%, #d7f9ec 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #d7f9ec 63.15789%, #d7f9ec 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #d7f9ec 84.21053%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #d7f9ec 21.05263%, #d7f9ec 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #d7f9ec 42.10526%, #d7f9ec 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #d7f9ec 63.15789%, #d7f9ec 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #d7f9ec 84.21053%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #d7f9ec 21.05263%, #d7f9ec 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #d7f9ec 42.10526%, #d7f9ec 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #d7f9ec 63.15789%, #d7f9ec 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #d7f9ec 84.21053%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 155, ../sass/doc.scss */
+  #s2 article:hover {
+    max-width: 736px;
+    max-width: 46rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(13.04348%, #d7f9ec), color-stop(13.04348%, #ffffff), color-stop(17.3913%, #ffffff), color-stop(17.3913%, #d7f9ec), color-stop(30.43478%, #d7f9ec), color-stop(30.43478%, #ffffff), color-stop(34.78261%, #ffffff), color-stop(34.78261%, #d7f9ec), color-stop(47.82609%, #d7f9ec), color-stop(47.82609%, #ffffff), color-stop(52.17391%, #ffffff), color-stop(52.17391%, #d7f9ec), color-stop(65.21739%, #d7f9ec), color-stop(65.21739%, #ffffff), color-stop(69.56522%, #ffffff), color-stop(69.56522%, #d7f9ec), color-stop(82.6087%, #d7f9ec), color-stop(82.6087%, #ffffff), color-stop(86.95652%, #ffffff), color-stop(86.95652%, #d7f9ec), color-stop(100%, #d7f9ec), color-stop(100%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #d7f9ec 17.3913%, #d7f9ec 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #d7f9ec 34.78261%, #d7f9ec 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #d7f9ec 52.17391%, #d7f9ec 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #d7f9ec 69.56522%, #d7f9ec 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #d7f9ec 86.95652%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #d7f9ec 17.3913%, #d7f9ec 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #d7f9ec 34.78261%, #d7f9ec 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #d7f9ec 52.17391%, #d7f9ec 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #d7f9ec 69.56522%, #d7f9ec 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #d7f9ec 86.95652%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #d7f9ec 17.3913%, #d7f9ec 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #d7f9ec 34.78261%, #d7f9ec 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #d7f9ec 52.17391%, #d7f9ec 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #d7f9ec 69.56522%, #d7f9ec 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #d7f9ec 86.95652%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #d7f9ec 17.3913%, #d7f9ec 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #d7f9ec 34.78261%, #d7f9ec 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #d7f9ec 52.17391%, #d7f9ec 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #d7f9ec 69.56522%, #d7f9ec 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #d7f9ec 86.95652%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 569px) and (max-width: 767px) {
+  /* line 155, ../sass/doc.scss */
+  #s2 article:hover {
+    max-width: 992px;
+    max-width: 62rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(9.67742%, #d7f9ec), color-stop(9.67742%, #ffffff), color-stop(12.90323%, #ffffff), color-stop(12.90323%, #d7f9ec), color-stop(22.58065%, #d7f9ec), color-stop(22.58065%, #ffffff), color-stop(25.80645%, #ffffff), color-stop(25.80645%, #d7f9ec), color-stop(35.48387%, #d7f9ec), color-stop(35.48387%, #ffffff), color-stop(38.70968%, #ffffff), color-stop(38.70968%, #d7f9ec), color-stop(48.3871%, #d7f9ec), color-stop(48.3871%, #ffffff), color-stop(51.6129%, #ffffff), color-stop(51.6129%, #d7f9ec), color-stop(61.29032%, #d7f9ec), color-stop(61.29032%, #ffffff), color-stop(64.51613%, #ffffff), color-stop(64.51613%, #d7f9ec), color-stop(74.19355%, #d7f9ec), color-stop(74.19355%, #ffffff), color-stop(77.41935%, #ffffff), color-stop(77.41935%, #d7f9ec), color-stop(87.09677%, #d7f9ec), color-stop(87.09677%, #ffffff), color-stop(90.32258%, #ffffff), color-stop(90.32258%, #d7f9ec), color-stop(100.0%, #d7f9ec), color-stop(100.0%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #d7f9ec 12.90323%, #d7f9ec 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #d7f9ec 25.80645%, #d7f9ec 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #d7f9ec 38.70968%, #d7f9ec 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #d7f9ec 51.6129%, #d7f9ec 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #d7f9ec 64.51613%, #d7f9ec 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #d7f9ec 77.41935%, #d7f9ec 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #d7f9ec 90.32258%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #d7f9ec 12.90323%, #d7f9ec 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #d7f9ec 25.80645%, #d7f9ec 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #d7f9ec 38.70968%, #d7f9ec 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #d7f9ec 51.6129%, #d7f9ec 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #d7f9ec 64.51613%, #d7f9ec 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #d7f9ec 77.41935%, #d7f9ec 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #d7f9ec 90.32258%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #d7f9ec 12.90323%, #d7f9ec 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #d7f9ec 25.80645%, #d7f9ec 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #d7f9ec 38.70968%, #d7f9ec 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #d7f9ec 51.6129%, #d7f9ec 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #d7f9ec 64.51613%, #d7f9ec 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #d7f9ec 77.41935%, #d7f9ec 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #d7f9ec 90.32258%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #d7f9ec 12.90323%, #d7f9ec 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #d7f9ec 25.80645%, #d7f9ec 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #d7f9ec 38.70968%, #d7f9ec 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #d7f9ec 51.6129%, #d7f9ec 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #d7f9ec 64.51613%, #d7f9ec 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #d7f9ec 77.41935%, #d7f9ec 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #d7f9ec 90.32258%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 768px) and (max-width: 939px) {
+  /* line 155, ../sass/doc.scss */
+  #s2 article:hover {
+    max-width: 1376px;
+    max-width: 86rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(6.97674%, #d7f9ec), color-stop(6.97674%, #ffffff), color-stop(9.30233%, #ffffff), color-stop(9.30233%, #d7f9ec), color-stop(16.27907%, #d7f9ec), color-stop(16.27907%, #ffffff), color-stop(18.60465%, #ffffff), color-stop(18.60465%, #d7f9ec), color-stop(25.5814%, #d7f9ec), color-stop(25.5814%, #ffffff), color-stop(27.90698%, #ffffff), color-stop(27.90698%, #d7f9ec), color-stop(34.88372%, #d7f9ec), color-stop(34.88372%, #ffffff), color-stop(37.2093%, #ffffff), color-stop(37.2093%, #d7f9ec), color-stop(44.18605%, #d7f9ec), color-stop(44.18605%, #ffffff), color-stop(46.51163%, #ffffff), color-stop(46.51163%, #d7f9ec), color-stop(53.48837%, #d7f9ec), color-stop(53.48837%, #ffffff), color-stop(55.81395%, #ffffff), color-stop(55.81395%, #d7f9ec), color-stop(62.7907%, #d7f9ec), color-stop(62.7907%, #ffffff), color-stop(65.11628%, #ffffff), color-stop(65.11628%, #d7f9ec), color-stop(72.09302%, #d7f9ec), color-stop(72.09302%, #ffffff), color-stop(74.4186%, #ffffff), color-stop(74.4186%, #d7f9ec), color-stop(81.39535%, #d7f9ec), color-stop(81.39535%, #ffffff), color-stop(83.72093%, #ffffff), color-stop(83.72093%, #d7f9ec), color-stop(90.69767%, #d7f9ec), color-stop(90.69767%, #ffffff), color-stop(93.02326%, #ffffff), color-stop(93.02326%, #d7f9ec), color-stop(100.0%, #d7f9ec), color-stop(100.0%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #d7f9ec 9.30233%, #d7f9ec 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #d7f9ec 18.60465%, #d7f9ec 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #d7f9ec 27.90698%, #d7f9ec 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #d7f9ec 37.2093%, #d7f9ec 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #d7f9ec 46.51163%, #d7f9ec 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #d7f9ec 55.81395%, #d7f9ec 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #d7f9ec 65.11628%, #d7f9ec 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #d7f9ec 74.4186%, #d7f9ec 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #d7f9ec 83.72093%, #d7f9ec 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #d7f9ec 93.02326%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #d7f9ec 9.30233%, #d7f9ec 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #d7f9ec 18.60465%, #d7f9ec 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #d7f9ec 27.90698%, #d7f9ec 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #d7f9ec 37.2093%, #d7f9ec 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #d7f9ec 46.51163%, #d7f9ec 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #d7f9ec 55.81395%, #d7f9ec 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #d7f9ec 65.11628%, #d7f9ec 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #d7f9ec 74.4186%, #d7f9ec 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #d7f9ec 83.72093%, #d7f9ec 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #d7f9ec 93.02326%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #d7f9ec 9.30233%, #d7f9ec 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #d7f9ec 18.60465%, #d7f9ec 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #d7f9ec 27.90698%, #d7f9ec 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #d7f9ec 37.2093%, #d7f9ec 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #d7f9ec 46.51163%, #d7f9ec 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #d7f9ec 55.81395%, #d7f9ec 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #d7f9ec 65.11628%, #d7f9ec 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #d7f9ec 74.4186%, #d7f9ec 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #d7f9ec 83.72093%, #d7f9ec 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #d7f9ec 93.02326%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #d7f9ec 9.30233%, #d7f9ec 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #d7f9ec 18.60465%, #d7f9ec 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #d7f9ec 27.90698%, #d7f9ec 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #d7f9ec 37.2093%, #d7f9ec 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #d7f9ec 46.51163%, #d7f9ec 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #d7f9ec 55.81395%, #d7f9ec 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #d7f9ec 65.11628%, #d7f9ec 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #d7f9ec 74.4186%, #d7f9ec 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #d7f9ec 83.72093%, #d7f9ec 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #d7f9ec 93.02326%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 940px) {
+  /* line 155, ../sass/doc.scss */
+  #s2 article:hover {
+    max-width: 1504px;
+    max-width: 94rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(6.38298%, #d7f9ec), color-stop(6.38298%, #ffffff), color-stop(8.51064%, #ffffff), color-stop(8.51064%, #d7f9ec), color-stop(14.89362%, #d7f9ec), color-stop(14.89362%, #ffffff), color-stop(17.02128%, #ffffff), color-stop(17.02128%, #d7f9ec), color-stop(23.40426%, #d7f9ec), color-stop(23.40426%, #ffffff), color-stop(25.53191%, #ffffff), color-stop(25.53191%, #d7f9ec), color-stop(31.91489%, #d7f9ec), color-stop(31.91489%, #ffffff), color-stop(34.04255%, #ffffff), color-stop(34.04255%, #d7f9ec), color-stop(40.42553%, #d7f9ec), color-stop(40.42553%, #ffffff), color-stop(42.55319%, #ffffff), color-stop(42.55319%, #d7f9ec), color-stop(48.93617%, #d7f9ec), color-stop(48.93617%, #ffffff), color-stop(51.06383%, #ffffff), color-stop(51.06383%, #d7f9ec), color-stop(57.44681%, #d7f9ec), color-stop(57.44681%, #ffffff), color-stop(59.57447%, #ffffff), color-stop(59.57447%, #d7f9ec), color-stop(65.95745%, #d7f9ec), color-stop(65.95745%, #ffffff), color-stop(68.08511%, #ffffff), color-stop(68.08511%, #d7f9ec), color-stop(74.46809%, #d7f9ec), color-stop(74.46809%, #ffffff), color-stop(76.59574%, #ffffff), color-stop(76.59574%, #d7f9ec), color-stop(82.97872%, #d7f9ec), color-stop(82.97872%, #ffffff), color-stop(85.10638%, #ffffff), color-stop(85.10638%, #d7f9ec), color-stop(91.48936%, #d7f9ec), color-stop(91.48936%, #ffffff), color-stop(93.61702%, #ffffff), color-stop(93.61702%, #d7f9ec), color-stop(100%, #d7f9ec), color-stop(100%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #d7f9ec 8.51064%, #d7f9ec 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #d7f9ec 17.02128%, #d7f9ec 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #d7f9ec 25.53191%, #d7f9ec 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #d7f9ec 34.04255%, #d7f9ec 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #d7f9ec 42.55319%, #d7f9ec 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #d7f9ec 51.06383%, #d7f9ec 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #d7f9ec 59.57447%, #d7f9ec 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #d7f9ec 68.08511%, #d7f9ec 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #d7f9ec 76.59574%, #d7f9ec 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #d7f9ec 85.10638%, #d7f9ec 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #d7f9ec 93.61702%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #d7f9ec 8.51064%, #d7f9ec 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #d7f9ec 17.02128%, #d7f9ec 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #d7f9ec 25.53191%, #d7f9ec 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #d7f9ec 34.04255%, #d7f9ec 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #d7f9ec 42.55319%, #d7f9ec 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #d7f9ec 51.06383%, #d7f9ec 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #d7f9ec 59.57447%, #d7f9ec 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #d7f9ec 68.08511%, #d7f9ec 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #d7f9ec 76.59574%, #d7f9ec 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #d7f9ec 85.10638%, #d7f9ec 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #d7f9ec 93.61702%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #d7f9ec 8.51064%, #d7f9ec 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #d7f9ec 17.02128%, #d7f9ec 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #d7f9ec 25.53191%, #d7f9ec 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #d7f9ec 34.04255%, #d7f9ec 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #d7f9ec 42.55319%, #d7f9ec 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #d7f9ec 51.06383%, #d7f9ec 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #d7f9ec 59.57447%, #d7f9ec 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #d7f9ec 68.08511%, #d7f9ec 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #d7f9ec 76.59574%, #d7f9ec 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #d7f9ec 85.10638%, #d7f9ec 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #d7f9ec 93.61702%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #d7f9ec 8.51064%, #d7f9ec 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #d7f9ec 17.02128%, #d7f9ec 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #d7f9ec 25.53191%, #d7f9ec 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #d7f9ec 34.04255%, #d7f9ec 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #d7f9ec 42.55319%, #d7f9ec 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #d7f9ec 51.06383%, #d7f9ec 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #d7f9ec 59.57447%, #d7f9ec 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #d7f9ec 68.08511%, #d7f9ec 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #d7f9ec 76.59574%, #d7f9ec 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #d7f9ec 85.10638%, #d7f9ec 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #d7f9ec 93.61702%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+/* line 156, ../sass/doc.scss */
+#s2 .slider-home {
+  overflow-x: hidden;
+}
+/* line 157, ../sass/doc.scss */
+#s2 .slider-home .dipta-slider-home {
+  position: absolute;
+  margin: -290px 0 0 30px;
+}
+/* line 159, ../sass/doc.scss */
+#s2 .slider-home img {
+  height: auto;
+}
+/* line 167, ../sass/doc.scss */
+#s2 .navigation-1 {
+  width: 74.46809%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+/* line 168, ../sass/doc.scss */
+#s2 .navigation-1 img {
+  max-width: 100% !important;
+}
+/* line 169, ../sass/doc.scss */
+#s2 .navigation-1 p, #s2 .navigation-1 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner .navigation-1 .text-banner {
+  border: 0;
+}
+/* line 170, ../sass/doc.scss */
+#s2 .navigation-1 .bloc {
+  margin: 0 2rem 0 2rem;
+}
+/* line 170, ../sass/doc.scss */
+#s2 .navigation-1 .bloc p:before, #s2 .navigation-1 .bloc .slider-home .info-banner .text-banner:before, #s2 .slider-home .info-banner .navigation-1 .bloc .text-banner:before {
+  content: "";
+  padding: 0;
+  margin: 0;
+}
+/* line 170, ../sass/doc.scss */
+#s2 .navigation-1 .bloc p, #s2 .navigation-1 .bloc .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner .navigation-1 .bloc .text-banner {
+  margin: 0;
+}
+/* line 172, ../sass/doc.scss */
+#s2 .navigation-2 {
+  width: 74.46809%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+/* line 173, ../sass/doc.scss */
+#s2 .navigation-2 img {
+  max-width: 100% !important;
+}
+/* line 174, ../sass/doc.scss */
+#s2 .navigation-2 p, #s2 .navigation-2 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner .navigation-2 .text-banner {
+  border: 0;
+}
+/* line 175, ../sass/doc.scss */
+#s2 .navigation-2 .bloc {
+  margin: 0 2rem 0 2rem;
+}
+/* line 175, ../sass/doc.scss */
+#s2 .navigation-2 .bloc p:before, #s2 .navigation-2 .bloc .slider-home .info-banner .text-banner:before, #s2 .slider-home .info-banner .navigation-2 .bloc .text-banner:before {
+  content: "";
+  padding: 0;
+  margin: 0;
+}
+/* line 177, ../sass/doc.scss */
+#s2 .navigation-3 {
+  width: 74.46809%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+/* line 178, ../sass/doc.scss */
+#s2 .navigation-3 img {
+  max-width: 100% !important;
+}
+/* line 179, ../sass/doc.scss */
+#s2 .navigation-3 p, #s2 .navigation-3 .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner .navigation-3 .text-banner {
+  border: 0;
+}
+/* line 180, ../sass/doc.scss */
+#s2 .navigation-3 .bloc {
+  margin: 0 2rem 0 2rem;
+}
+/* line 180, ../sass/doc.scss */
+#s2 .navigation-3 .bloc p:before, #s2 .navigation-3 .bloc .slider-home .info-banner .text-banner:before, #s2 .slider-home .info-banner .navigation-3 .bloc .text-banner:before {
+  content: "";
+  padding: 0;
+  margin: 0;
+}
+/* line 180, ../sass/doc.scss */
+#s2 .navigation-3 .bloc p, #s2 .navigation-3 .bloc .slider-home .info-banner .text-banner, #s2 .slider-home .info-banner .navigation-3 .bloc .text-banner {
+  margin: 0;
+}
+/* line 182, ../sass/doc.scss */
+#s2 .pagina-basica {
+  width: 74.46809%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+/* line 182, ../sass/doc.scss */
+#s2 .pagina-basica img {
+  max-width: 100% !important;
+}
+/* line 184, ../sass/doc.scss */
+#s2 #dipta-noticia {
+  background-color: #ebebeb;
+  padding: 2rem;
+}
+/* line 186, ../sass/doc.scss */
+#s2 #dipta-noticia h2 {
+  background-color: #fff;
+  border-bottom: 0.4rem solid #ebebeb;
+}
+/* line 188, ../sass/doc.scss */
+#s2 #dipta-noticia .contingut div.dipta-resum {
+  width: 44%;
+  float: left;
+  padding: 2rem 2rem 2rem 2rem;
+}
+/* line 189, ../sass/doc.scss */
+#s2 #dipta-noticia .contingut div.dipta-resum:first-child {
+  border-right: 0.4rem solid #ebebeb;
+  border-bottom: 0;
+}
+/* line 190, ../sass/doc.scss */
+#s2 #dipta-noticia .contingut div.dipta-resum + div.dipta-resum {
+  padding-right: 2rem;
+  border-bottom: 0.4rem solid #ebebeb;
+}
+/* line 191, ../sass/doc.scss */
+#s2 #dipta-noticia .contingut div.dipta-resum:last-child {
+  border-bottom: 0!important;
+}
+/* line 194, ../sass/doc.scss */
+#s2 #dipta-agenda {
+  background-color: #ebebeb;
+  padding: 2rem;
+}
+/* line 196, ../sass/doc.scss */
+#s2 #dipta-agenda h2 {
+  background-color: #fff;
+  border-bottom: 0.4rem solid #ebebeb;
+}
+
+/*navigation*/
+/* line 201, ../sass/doc.scss */
+#s3 {
+  *zoom: 1;
+  max-width: 1504px;
+  max-width: 94rem;
+  _width: 1504px;
+  padding-left: 32px;
+  padding-left: 2rem;
+  padding-right: 32px;
+  padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#s3:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 320px) {
+  /* line 202, ../sass/doc.scss */
+  #s3 article:hover {
+    max-width: 480px;
+    max-width: 30rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(20%, #d7f9ec), color-stop(20%, #ffffff), color-stop(26.66667%, #ffffff), color-stop(26.66667%, #d7f9ec), color-stop(46.66667%, #d7f9ec), color-stop(46.66667%, #ffffff), color-stop(53.33333%, #ffffff), color-stop(53.33333%, #d7f9ec), color-stop(73.33333%, #d7f9ec), color-stop(73.33333%, #ffffff), color-stop(80.0%, #ffffff), color-stop(80%, #d7f9ec), color-stop(100%, #d7f9ec), color-stop(100%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 20%, #ffffff 20%, #ffffff 26.66667%, #d7f9ec 26.66667%, #d7f9ec 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #d7f9ec 53.33333%, #d7f9ec 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #d7f9ec 80%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 20%, #ffffff 20%, #ffffff 26.66667%, #d7f9ec 26.66667%, #d7f9ec 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #d7f9ec 53.33333%, #d7f9ec 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #d7f9ec 80%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 20%, #ffffff 20%, #ffffff 26.66667%, #d7f9ec 26.66667%, #d7f9ec 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #d7f9ec 53.33333%, #d7f9ec 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #d7f9ec 80%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 20%, #ffffff 20%, #ffffff 26.66667%, #d7f9ec 26.66667%, #d7f9ec 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #d7f9ec 53.33333%, #d7f9ec 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #d7f9ec 80%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 202, ../sass/doc.scss */
+  #s3 article:hover {
+    max-width: 608px;
+    max-width: 38rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(15.78947%, #d7f9ec), color-stop(15.78947%, #ffffff), color-stop(21.05263%, #ffffff), color-stop(21.05263%, #d7f9ec), color-stop(36.84211%, #d7f9ec), color-stop(36.84211%, #ffffff), color-stop(42.10526%, #ffffff), color-stop(42.10526%, #d7f9ec), color-stop(57.89474%, #d7f9ec), color-stop(57.89474%, #ffffff), color-stop(63.15789%, #ffffff), color-stop(63.15789%, #d7f9ec), color-stop(78.94737%, #d7f9ec), color-stop(78.94737%, #ffffff), color-stop(84.21053%, #ffffff), color-stop(84.21053%, #d7f9ec), color-stop(100.0%, #d7f9ec), color-stop(100.0%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #d7f9ec 21.05263%, #d7f9ec 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #d7f9ec 42.10526%, #d7f9ec 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #d7f9ec 63.15789%, #d7f9ec 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #d7f9ec 84.21053%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #d7f9ec 21.05263%, #d7f9ec 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #d7f9ec 42.10526%, #d7f9ec 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #d7f9ec 63.15789%, #d7f9ec 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #d7f9ec 84.21053%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #d7f9ec 21.05263%, #d7f9ec 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #d7f9ec 42.10526%, #d7f9ec 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #d7f9ec 63.15789%, #d7f9ec 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #d7f9ec 84.21053%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #d7f9ec 21.05263%, #d7f9ec 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #d7f9ec 42.10526%, #d7f9ec 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #d7f9ec 63.15789%, #d7f9ec 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #d7f9ec 84.21053%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 202, ../sass/doc.scss */
+  #s3 article:hover {
+    max-width: 736px;
+    max-width: 46rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(13.04348%, #d7f9ec), color-stop(13.04348%, #ffffff), color-stop(17.3913%, #ffffff), color-stop(17.3913%, #d7f9ec), color-stop(30.43478%, #d7f9ec), color-stop(30.43478%, #ffffff), color-stop(34.78261%, #ffffff), color-stop(34.78261%, #d7f9ec), color-stop(47.82609%, #d7f9ec), color-stop(47.82609%, #ffffff), color-stop(52.17391%, #ffffff), color-stop(52.17391%, #d7f9ec), color-stop(65.21739%, #d7f9ec), color-stop(65.21739%, #ffffff), color-stop(69.56522%, #ffffff), color-stop(69.56522%, #d7f9ec), color-stop(82.6087%, #d7f9ec), color-stop(82.6087%, #ffffff), color-stop(86.95652%, #ffffff), color-stop(86.95652%, #d7f9ec), color-stop(100%, #d7f9ec), color-stop(100%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #d7f9ec 17.3913%, #d7f9ec 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #d7f9ec 34.78261%, #d7f9ec 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #d7f9ec 52.17391%, #d7f9ec 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #d7f9ec 69.56522%, #d7f9ec 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #d7f9ec 86.95652%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #d7f9ec 17.3913%, #d7f9ec 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #d7f9ec 34.78261%, #d7f9ec 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #d7f9ec 52.17391%, #d7f9ec 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #d7f9ec 69.56522%, #d7f9ec 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #d7f9ec 86.95652%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #d7f9ec 17.3913%, #d7f9ec 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #d7f9ec 34.78261%, #d7f9ec 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #d7f9ec 52.17391%, #d7f9ec 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #d7f9ec 69.56522%, #d7f9ec 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #d7f9ec 86.95652%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #d7f9ec 17.3913%, #d7f9ec 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #d7f9ec 34.78261%, #d7f9ec 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #d7f9ec 52.17391%, #d7f9ec 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #d7f9ec 69.56522%, #d7f9ec 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #d7f9ec 86.95652%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 569px) and (max-width: 767px) {
+  /* line 202, ../sass/doc.scss */
+  #s3 article:hover {
+    max-width: 992px;
+    max-width: 62rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(9.67742%, #d7f9ec), color-stop(9.67742%, #ffffff), color-stop(12.90323%, #ffffff), color-stop(12.90323%, #d7f9ec), color-stop(22.58065%, #d7f9ec), color-stop(22.58065%, #ffffff), color-stop(25.80645%, #ffffff), color-stop(25.80645%, #d7f9ec), color-stop(35.48387%, #d7f9ec), color-stop(35.48387%, #ffffff), color-stop(38.70968%, #ffffff), color-stop(38.70968%, #d7f9ec), color-stop(48.3871%, #d7f9ec), color-stop(48.3871%, #ffffff), color-stop(51.6129%, #ffffff), color-stop(51.6129%, #d7f9ec), color-stop(61.29032%, #d7f9ec), color-stop(61.29032%, #ffffff), color-stop(64.51613%, #ffffff), color-stop(64.51613%, #d7f9ec), color-stop(74.19355%, #d7f9ec), color-stop(74.19355%, #ffffff), color-stop(77.41935%, #ffffff), color-stop(77.41935%, #d7f9ec), color-stop(87.09677%, #d7f9ec), color-stop(87.09677%, #ffffff), color-stop(90.32258%, #ffffff), color-stop(90.32258%, #d7f9ec), color-stop(100.0%, #d7f9ec), color-stop(100.0%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #d7f9ec 12.90323%, #d7f9ec 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #d7f9ec 25.80645%, #d7f9ec 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #d7f9ec 38.70968%, #d7f9ec 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #d7f9ec 51.6129%, #d7f9ec 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #d7f9ec 64.51613%, #d7f9ec 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #d7f9ec 77.41935%, #d7f9ec 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #d7f9ec 90.32258%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #d7f9ec 12.90323%, #d7f9ec 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #d7f9ec 25.80645%, #d7f9ec 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #d7f9ec 38.70968%, #d7f9ec 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #d7f9ec 51.6129%, #d7f9ec 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #d7f9ec 64.51613%, #d7f9ec 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #d7f9ec 77.41935%, #d7f9ec 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #d7f9ec 90.32258%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #d7f9ec 12.90323%, #d7f9ec 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #d7f9ec 25.80645%, #d7f9ec 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #d7f9ec 38.70968%, #d7f9ec 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #d7f9ec 51.6129%, #d7f9ec 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #d7f9ec 64.51613%, #d7f9ec 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #d7f9ec 77.41935%, #d7f9ec 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #d7f9ec 90.32258%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #d7f9ec 12.90323%, #d7f9ec 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #d7f9ec 25.80645%, #d7f9ec 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #d7f9ec 38.70968%, #d7f9ec 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #d7f9ec 51.6129%, #d7f9ec 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #d7f9ec 64.51613%, #d7f9ec 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #d7f9ec 77.41935%, #d7f9ec 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #d7f9ec 90.32258%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 768px) and (max-width: 939px) {
+  /* line 202, ../sass/doc.scss */
+  #s3 article:hover {
+    max-width: 1376px;
+    max-width: 86rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(6.97674%, #d7f9ec), color-stop(6.97674%, #ffffff), color-stop(9.30233%, #ffffff), color-stop(9.30233%, #d7f9ec), color-stop(16.27907%, #d7f9ec), color-stop(16.27907%, #ffffff), color-stop(18.60465%, #ffffff), color-stop(18.60465%, #d7f9ec), color-stop(25.5814%, #d7f9ec), color-stop(25.5814%, #ffffff), color-stop(27.90698%, #ffffff), color-stop(27.90698%, #d7f9ec), color-stop(34.88372%, #d7f9ec), color-stop(34.88372%, #ffffff), color-stop(37.2093%, #ffffff), color-stop(37.2093%, #d7f9ec), color-stop(44.18605%, #d7f9ec), color-stop(44.18605%, #ffffff), color-stop(46.51163%, #ffffff), color-stop(46.51163%, #d7f9ec), color-stop(53.48837%, #d7f9ec), color-stop(53.48837%, #ffffff), color-stop(55.81395%, #ffffff), color-stop(55.81395%, #d7f9ec), color-stop(62.7907%, #d7f9ec), color-stop(62.7907%, #ffffff), color-stop(65.11628%, #ffffff), color-stop(65.11628%, #d7f9ec), color-stop(72.09302%, #d7f9ec), color-stop(72.09302%, #ffffff), color-stop(74.4186%, #ffffff), color-stop(74.4186%, #d7f9ec), color-stop(81.39535%, #d7f9ec), color-stop(81.39535%, #ffffff), color-stop(83.72093%, #ffffff), color-stop(83.72093%, #d7f9ec), color-stop(90.69767%, #d7f9ec), color-stop(90.69767%, #ffffff), color-stop(93.02326%, #ffffff), color-stop(93.02326%, #d7f9ec), color-stop(100.0%, #d7f9ec), color-stop(100.0%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #d7f9ec 9.30233%, #d7f9ec 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #d7f9ec 18.60465%, #d7f9ec 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #d7f9ec 27.90698%, #d7f9ec 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #d7f9ec 37.2093%, #d7f9ec 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #d7f9ec 46.51163%, #d7f9ec 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #d7f9ec 55.81395%, #d7f9ec 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #d7f9ec 65.11628%, #d7f9ec 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #d7f9ec 74.4186%, #d7f9ec 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #d7f9ec 83.72093%, #d7f9ec 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #d7f9ec 93.02326%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #d7f9ec 9.30233%, #d7f9ec 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #d7f9ec 18.60465%, #d7f9ec 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #d7f9ec 27.90698%, #d7f9ec 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #d7f9ec 37.2093%, #d7f9ec 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #d7f9ec 46.51163%, #d7f9ec 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #d7f9ec 55.81395%, #d7f9ec 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #d7f9ec 65.11628%, #d7f9ec 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #d7f9ec 74.4186%, #d7f9ec 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #d7f9ec 83.72093%, #d7f9ec 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #d7f9ec 93.02326%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #d7f9ec 9.30233%, #d7f9ec 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #d7f9ec 18.60465%, #d7f9ec 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #d7f9ec 27.90698%, #d7f9ec 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #d7f9ec 37.2093%, #d7f9ec 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #d7f9ec 46.51163%, #d7f9ec 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #d7f9ec 55.81395%, #d7f9ec 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #d7f9ec 65.11628%, #d7f9ec 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #d7f9ec 74.4186%, #d7f9ec 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #d7f9ec 83.72093%, #d7f9ec 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #d7f9ec 93.02326%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #d7f9ec 9.30233%, #d7f9ec 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #d7f9ec 18.60465%, #d7f9ec 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #d7f9ec 27.90698%, #d7f9ec 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #d7f9ec 37.2093%, #d7f9ec 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #d7f9ec 46.51163%, #d7f9ec 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #d7f9ec 55.81395%, #d7f9ec 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #d7f9ec 65.11628%, #d7f9ec 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #d7f9ec 74.4186%, #d7f9ec 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #d7f9ec 83.72093%, #d7f9ec 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #d7f9ec 93.02326%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 940px) {
+  /* line 202, ../sass/doc.scss */
+  #s3 article:hover {
+    max-width: 1504px;
+    max-width: 94rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(6.38298%, #d7f9ec), color-stop(6.38298%, #ffffff), color-stop(8.51064%, #ffffff), color-stop(8.51064%, #d7f9ec), color-stop(14.89362%, #d7f9ec), color-stop(14.89362%, #ffffff), color-stop(17.02128%, #ffffff), color-stop(17.02128%, #d7f9ec), color-stop(23.40426%, #d7f9ec), color-stop(23.40426%, #ffffff), color-stop(25.53191%, #ffffff), color-stop(25.53191%, #d7f9ec), color-stop(31.91489%, #d7f9ec), color-stop(31.91489%, #ffffff), color-stop(34.04255%, #ffffff), color-stop(34.04255%, #d7f9ec), color-stop(40.42553%, #d7f9ec), color-stop(40.42553%, #ffffff), color-stop(42.55319%, #ffffff), color-stop(42.55319%, #d7f9ec), color-stop(48.93617%, #d7f9ec), color-stop(48.93617%, #ffffff), color-stop(51.06383%, #ffffff), color-stop(51.06383%, #d7f9ec), color-stop(57.44681%, #d7f9ec), color-stop(57.44681%, #ffffff), color-stop(59.57447%, #ffffff), color-stop(59.57447%, #d7f9ec), color-stop(65.95745%, #d7f9ec), color-stop(65.95745%, #ffffff), color-stop(68.08511%, #ffffff), color-stop(68.08511%, #d7f9ec), color-stop(74.46809%, #d7f9ec), color-stop(74.46809%, #ffffff), color-stop(76.59574%, #ffffff), color-stop(76.59574%, #d7f9ec), color-stop(82.97872%, #d7f9ec), color-stop(82.97872%, #ffffff), color-stop(85.10638%, #ffffff), color-stop(85.10638%, #d7f9ec), color-stop(91.48936%, #d7f9ec), color-stop(91.48936%, #ffffff), color-stop(93.61702%, #ffffff), color-stop(93.61702%, #d7f9ec), color-stop(100%, #d7f9ec), color-stop(100%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #d7f9ec 8.51064%, #d7f9ec 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #d7f9ec 17.02128%, #d7f9ec 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #d7f9ec 25.53191%, #d7f9ec 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #d7f9ec 34.04255%, #d7f9ec 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #d7f9ec 42.55319%, #d7f9ec 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #d7f9ec 51.06383%, #d7f9ec 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #d7f9ec 59.57447%, #d7f9ec 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #d7f9ec 68.08511%, #d7f9ec 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #d7f9ec 76.59574%, #d7f9ec 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #d7f9ec 85.10638%, #d7f9ec 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #d7f9ec 93.61702%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #d7f9ec 8.51064%, #d7f9ec 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #d7f9ec 17.02128%, #d7f9ec 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #d7f9ec 25.53191%, #d7f9ec 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #d7f9ec 34.04255%, #d7f9ec 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #d7f9ec 42.55319%, #d7f9ec 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #d7f9ec 51.06383%, #d7f9ec 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #d7f9ec 59.57447%, #d7f9ec 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #d7f9ec 68.08511%, #d7f9ec 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #d7f9ec 76.59574%, #d7f9ec 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #d7f9ec 85.10638%, #d7f9ec 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #d7f9ec 93.61702%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #d7f9ec 8.51064%, #d7f9ec 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #d7f9ec 17.02128%, #d7f9ec 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #d7f9ec 25.53191%, #d7f9ec 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #d7f9ec 34.04255%, #d7f9ec 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #d7f9ec 42.55319%, #d7f9ec 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #d7f9ec 51.06383%, #d7f9ec 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #d7f9ec 59.57447%, #d7f9ec 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #d7f9ec 68.08511%, #d7f9ec 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #d7f9ec 76.59574%, #d7f9ec 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #d7f9ec 85.10638%, #d7f9ec 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #d7f9ec 93.61702%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #d7f9ec 8.51064%, #d7f9ec 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #d7f9ec 17.02128%, #d7f9ec 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #d7f9ec 25.53191%, #d7f9ec 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #d7f9ec 34.04255%, #d7f9ec 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #d7f9ec 42.55319%, #d7f9ec 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #d7f9ec 51.06383%, #d7f9ec 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #d7f9ec 59.57447%, #d7f9ec 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #d7f9ec 68.08511%, #d7f9ec 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #d7f9ec 76.59574%, #d7f9ec 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #d7f9ec 85.10638%, #d7f9ec 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #d7f9ec 93.61702%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+
+/* line 223, ../sass/doc.scss */
+#s5, #s7, #s4, #s8 {
+  *zoom: 1;
+  max-width: 1504px;
+  max-width: 94rem;
+  _width: 1504px;
+  padding-left: 32px;
+  padding-left: 2rem;
+  padding-right: 32px;
+  padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#s5:after, #s7:after, #s4:after, #s8:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 320px) {
+  /* line 225, ../sass/doc.scss */
+  #s5 article:hover, #s7 article:hover, #s4 article:hover, #s8 article:hover {
+    max-width: 480px;
+    max-width: 30rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(20%, #d7f9ec), color-stop(20%, #ffffff), color-stop(26.66667%, #ffffff), color-stop(26.66667%, #d7f9ec), color-stop(46.66667%, #d7f9ec), color-stop(46.66667%, #ffffff), color-stop(53.33333%, #ffffff), color-stop(53.33333%, #d7f9ec), color-stop(73.33333%, #d7f9ec), color-stop(73.33333%, #ffffff), color-stop(80.0%, #ffffff), color-stop(80%, #d7f9ec), color-stop(100%, #d7f9ec), color-stop(100%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 20%, #ffffff 20%, #ffffff 26.66667%, #d7f9ec 26.66667%, #d7f9ec 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #d7f9ec 53.33333%, #d7f9ec 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #d7f9ec 80%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 20%, #ffffff 20%, #ffffff 26.66667%, #d7f9ec 26.66667%, #d7f9ec 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #d7f9ec 53.33333%, #d7f9ec 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #d7f9ec 80%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 20%, #ffffff 20%, #ffffff 26.66667%, #d7f9ec 26.66667%, #d7f9ec 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #d7f9ec 53.33333%, #d7f9ec 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #d7f9ec 80%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 20%, #ffffff 20%, #ffffff 26.66667%, #d7f9ec 26.66667%, #d7f9ec 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #d7f9ec 53.33333%, #d7f9ec 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #d7f9ec 80%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 225, ../sass/doc.scss */
+  #s5 article:hover, #s7 article:hover, #s4 article:hover, #s8 article:hover {
+    max-width: 608px;
+    max-width: 38rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(15.78947%, #d7f9ec), color-stop(15.78947%, #ffffff), color-stop(21.05263%, #ffffff), color-stop(21.05263%, #d7f9ec), color-stop(36.84211%, #d7f9ec), color-stop(36.84211%, #ffffff), color-stop(42.10526%, #ffffff), color-stop(42.10526%, #d7f9ec), color-stop(57.89474%, #d7f9ec), color-stop(57.89474%, #ffffff), color-stop(63.15789%, #ffffff), color-stop(63.15789%, #d7f9ec), color-stop(78.94737%, #d7f9ec), color-stop(78.94737%, #ffffff), color-stop(84.21053%, #ffffff), color-stop(84.21053%, #d7f9ec), color-stop(100.0%, #d7f9ec), color-stop(100.0%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #d7f9ec 21.05263%, #d7f9ec 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #d7f9ec 42.10526%, #d7f9ec 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #d7f9ec 63.15789%, #d7f9ec 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #d7f9ec 84.21053%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #d7f9ec 21.05263%, #d7f9ec 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #d7f9ec 42.10526%, #d7f9ec 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #d7f9ec 63.15789%, #d7f9ec 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #d7f9ec 84.21053%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #d7f9ec 21.05263%, #d7f9ec 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #d7f9ec 42.10526%, #d7f9ec 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #d7f9ec 63.15789%, #d7f9ec 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #d7f9ec 84.21053%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #d7f9ec 21.05263%, #d7f9ec 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #d7f9ec 42.10526%, #d7f9ec 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #d7f9ec 63.15789%, #d7f9ec 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #d7f9ec 84.21053%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 225, ../sass/doc.scss */
+  #s5 article:hover, #s7 article:hover, #s4 article:hover, #s8 article:hover {
+    max-width: 736px;
+    max-width: 46rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(13.04348%, #d7f9ec), color-stop(13.04348%, #ffffff), color-stop(17.3913%, #ffffff), color-stop(17.3913%, #d7f9ec), color-stop(30.43478%, #d7f9ec), color-stop(30.43478%, #ffffff), color-stop(34.78261%, #ffffff), color-stop(34.78261%, #d7f9ec), color-stop(47.82609%, #d7f9ec), color-stop(47.82609%, #ffffff), color-stop(52.17391%, #ffffff), color-stop(52.17391%, #d7f9ec), color-stop(65.21739%, #d7f9ec), color-stop(65.21739%, #ffffff), color-stop(69.56522%, #ffffff), color-stop(69.56522%, #d7f9ec), color-stop(82.6087%, #d7f9ec), color-stop(82.6087%, #ffffff), color-stop(86.95652%, #ffffff), color-stop(86.95652%, #d7f9ec), color-stop(100%, #d7f9ec), color-stop(100%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #d7f9ec 17.3913%, #d7f9ec 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #d7f9ec 34.78261%, #d7f9ec 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #d7f9ec 52.17391%, #d7f9ec 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #d7f9ec 69.56522%, #d7f9ec 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #d7f9ec 86.95652%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #d7f9ec 17.3913%, #d7f9ec 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #d7f9ec 34.78261%, #d7f9ec 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #d7f9ec 52.17391%, #d7f9ec 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #d7f9ec 69.56522%, #d7f9ec 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #d7f9ec 86.95652%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #d7f9ec 17.3913%, #d7f9ec 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #d7f9ec 34.78261%, #d7f9ec 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #d7f9ec 52.17391%, #d7f9ec 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #d7f9ec 69.56522%, #d7f9ec 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #d7f9ec 86.95652%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #d7f9ec 17.3913%, #d7f9ec 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #d7f9ec 34.78261%, #d7f9ec 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #d7f9ec 52.17391%, #d7f9ec 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #d7f9ec 69.56522%, #d7f9ec 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #d7f9ec 86.95652%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 569px) and (max-width: 767px) {
+  /* line 225, ../sass/doc.scss */
+  #s5 article:hover, #s7 article:hover, #s4 article:hover, #s8 article:hover {
+    max-width: 992px;
+    max-width: 62rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(9.67742%, #d7f9ec), color-stop(9.67742%, #ffffff), color-stop(12.90323%, #ffffff), color-stop(12.90323%, #d7f9ec), color-stop(22.58065%, #d7f9ec), color-stop(22.58065%, #ffffff), color-stop(25.80645%, #ffffff), color-stop(25.80645%, #d7f9ec), color-stop(35.48387%, #d7f9ec), color-stop(35.48387%, #ffffff), color-stop(38.70968%, #ffffff), color-stop(38.70968%, #d7f9ec), color-stop(48.3871%, #d7f9ec), color-stop(48.3871%, #ffffff), color-stop(51.6129%, #ffffff), color-stop(51.6129%, #d7f9ec), color-stop(61.29032%, #d7f9ec), color-stop(61.29032%, #ffffff), color-stop(64.51613%, #ffffff), color-stop(64.51613%, #d7f9ec), color-stop(74.19355%, #d7f9ec), color-stop(74.19355%, #ffffff), color-stop(77.41935%, #ffffff), color-stop(77.41935%, #d7f9ec), color-stop(87.09677%, #d7f9ec), color-stop(87.09677%, #ffffff), color-stop(90.32258%, #ffffff), color-stop(90.32258%, #d7f9ec), color-stop(100.0%, #d7f9ec), color-stop(100.0%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #d7f9ec 12.90323%, #d7f9ec 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #d7f9ec 25.80645%, #d7f9ec 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #d7f9ec 38.70968%, #d7f9ec 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #d7f9ec 51.6129%, #d7f9ec 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #d7f9ec 64.51613%, #d7f9ec 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #d7f9ec 77.41935%, #d7f9ec 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #d7f9ec 90.32258%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #d7f9ec 12.90323%, #d7f9ec 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #d7f9ec 25.80645%, #d7f9ec 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #d7f9ec 38.70968%, #d7f9ec 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #d7f9ec 51.6129%, #d7f9ec 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #d7f9ec 64.51613%, #d7f9ec 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #d7f9ec 77.41935%, #d7f9ec 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #d7f9ec 90.32258%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #d7f9ec 12.90323%, #d7f9ec 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #d7f9ec 25.80645%, #d7f9ec 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #d7f9ec 38.70968%, #d7f9ec 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #d7f9ec 51.6129%, #d7f9ec 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #d7f9ec 64.51613%, #d7f9ec 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #d7f9ec 77.41935%, #d7f9ec 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #d7f9ec 90.32258%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #d7f9ec 12.90323%, #d7f9ec 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #d7f9ec 25.80645%, #d7f9ec 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #d7f9ec 38.70968%, #d7f9ec 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #d7f9ec 51.6129%, #d7f9ec 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #d7f9ec 64.51613%, #d7f9ec 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #d7f9ec 77.41935%, #d7f9ec 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #d7f9ec 90.32258%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 768px) and (max-width: 939px) {
+  /* line 225, ../sass/doc.scss */
+  #s5 article:hover, #s7 article:hover, #s4 article:hover, #s8 article:hover {
+    max-width: 1376px;
+    max-width: 86rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(6.97674%, #d7f9ec), color-stop(6.97674%, #ffffff), color-stop(9.30233%, #ffffff), color-stop(9.30233%, #d7f9ec), color-stop(16.27907%, #d7f9ec), color-stop(16.27907%, #ffffff), color-stop(18.60465%, #ffffff), color-stop(18.60465%, #d7f9ec), color-stop(25.5814%, #d7f9ec), color-stop(25.5814%, #ffffff), color-stop(27.90698%, #ffffff), color-stop(27.90698%, #d7f9ec), color-stop(34.88372%, #d7f9ec), color-stop(34.88372%, #ffffff), color-stop(37.2093%, #ffffff), color-stop(37.2093%, #d7f9ec), color-stop(44.18605%, #d7f9ec), color-stop(44.18605%, #ffffff), color-stop(46.51163%, #ffffff), color-stop(46.51163%, #d7f9ec), color-stop(53.48837%, #d7f9ec), color-stop(53.48837%, #ffffff), color-stop(55.81395%, #ffffff), color-stop(55.81395%, #d7f9ec), color-stop(62.7907%, #d7f9ec), color-stop(62.7907%, #ffffff), color-stop(65.11628%, #ffffff), color-stop(65.11628%, #d7f9ec), color-stop(72.09302%, #d7f9ec), color-stop(72.09302%, #ffffff), color-stop(74.4186%, #ffffff), color-stop(74.4186%, #d7f9ec), color-stop(81.39535%, #d7f9ec), color-stop(81.39535%, #ffffff), color-stop(83.72093%, #ffffff), color-stop(83.72093%, #d7f9ec), color-stop(90.69767%, #d7f9ec), color-stop(90.69767%, #ffffff), color-stop(93.02326%, #ffffff), color-stop(93.02326%, #d7f9ec), color-stop(100.0%, #d7f9ec), color-stop(100.0%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #d7f9ec 9.30233%, #d7f9ec 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #d7f9ec 18.60465%, #d7f9ec 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #d7f9ec 27.90698%, #d7f9ec 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #d7f9ec 37.2093%, #d7f9ec 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #d7f9ec 46.51163%, #d7f9ec 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #d7f9ec 55.81395%, #d7f9ec 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #d7f9ec 65.11628%, #d7f9ec 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #d7f9ec 74.4186%, #d7f9ec 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #d7f9ec 83.72093%, #d7f9ec 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #d7f9ec 93.02326%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #d7f9ec 9.30233%, #d7f9ec 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #d7f9ec 18.60465%, #d7f9ec 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #d7f9ec 27.90698%, #d7f9ec 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #d7f9ec 37.2093%, #d7f9ec 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #d7f9ec 46.51163%, #d7f9ec 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #d7f9ec 55.81395%, #d7f9ec 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #d7f9ec 65.11628%, #d7f9ec 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #d7f9ec 74.4186%, #d7f9ec 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #d7f9ec 83.72093%, #d7f9ec 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #d7f9ec 93.02326%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #d7f9ec 9.30233%, #d7f9ec 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #d7f9ec 18.60465%, #d7f9ec 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #d7f9ec 27.90698%, #d7f9ec 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #d7f9ec 37.2093%, #d7f9ec 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #d7f9ec 46.51163%, #d7f9ec 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #d7f9ec 55.81395%, #d7f9ec 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #d7f9ec 65.11628%, #d7f9ec 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #d7f9ec 74.4186%, #d7f9ec 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #d7f9ec 83.72093%, #d7f9ec 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #d7f9ec 93.02326%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #d7f9ec 9.30233%, #d7f9ec 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #d7f9ec 18.60465%, #d7f9ec 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #d7f9ec 27.90698%, #d7f9ec 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #d7f9ec 37.2093%, #d7f9ec 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #d7f9ec 46.51163%, #d7f9ec 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #d7f9ec 55.81395%, #d7f9ec 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #d7f9ec 65.11628%, #d7f9ec 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #d7f9ec 74.4186%, #d7f9ec 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #d7f9ec 83.72093%, #d7f9ec 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #d7f9ec 93.02326%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 940px) {
+  /* line 225, ../sass/doc.scss */
+  #s5 article:hover, #s7 article:hover, #s4 article:hover, #s8 article:hover {
+    max-width: 1504px;
+    max-width: 94rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(6.38298%, #d7f9ec), color-stop(6.38298%, #ffffff), color-stop(8.51064%, #ffffff), color-stop(8.51064%, #d7f9ec), color-stop(14.89362%, #d7f9ec), color-stop(14.89362%, #ffffff), color-stop(17.02128%, #ffffff), color-stop(17.02128%, #d7f9ec), color-stop(23.40426%, #d7f9ec), color-stop(23.40426%, #ffffff), color-stop(25.53191%, #ffffff), color-stop(25.53191%, #d7f9ec), color-stop(31.91489%, #d7f9ec), color-stop(31.91489%, #ffffff), color-stop(34.04255%, #ffffff), color-stop(34.04255%, #d7f9ec), color-stop(40.42553%, #d7f9ec), color-stop(40.42553%, #ffffff), color-stop(42.55319%, #ffffff), color-stop(42.55319%, #d7f9ec), color-stop(48.93617%, #d7f9ec), color-stop(48.93617%, #ffffff), color-stop(51.06383%, #ffffff), color-stop(51.06383%, #d7f9ec), color-stop(57.44681%, #d7f9ec), color-stop(57.44681%, #ffffff), color-stop(59.57447%, #ffffff), color-stop(59.57447%, #d7f9ec), color-stop(65.95745%, #d7f9ec), color-stop(65.95745%, #ffffff), color-stop(68.08511%, #ffffff), color-stop(68.08511%, #d7f9ec), color-stop(74.46809%, #d7f9ec), color-stop(74.46809%, #ffffff), color-stop(76.59574%, #ffffff), color-stop(76.59574%, #d7f9ec), color-stop(82.97872%, #d7f9ec), color-stop(82.97872%, #ffffff), color-stop(85.10638%, #ffffff), color-stop(85.10638%, #d7f9ec), color-stop(91.48936%, #d7f9ec), color-stop(91.48936%, #ffffff), color-stop(93.61702%, #ffffff), color-stop(93.61702%, #d7f9ec), color-stop(100%, #d7f9ec), color-stop(100%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #d7f9ec 8.51064%, #d7f9ec 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #d7f9ec 17.02128%, #d7f9ec 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #d7f9ec 25.53191%, #d7f9ec 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #d7f9ec 34.04255%, #d7f9ec 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #d7f9ec 42.55319%, #d7f9ec 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #d7f9ec 51.06383%, #d7f9ec 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #d7f9ec 59.57447%, #d7f9ec 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #d7f9ec 68.08511%, #d7f9ec 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #d7f9ec 76.59574%, #d7f9ec 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #d7f9ec 85.10638%, #d7f9ec 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #d7f9ec 93.61702%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #d7f9ec 8.51064%, #d7f9ec 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #d7f9ec 17.02128%, #d7f9ec 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #d7f9ec 25.53191%, #d7f9ec 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #d7f9ec 34.04255%, #d7f9ec 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #d7f9ec 42.55319%, #d7f9ec 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #d7f9ec 51.06383%, #d7f9ec 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #d7f9ec 59.57447%, #d7f9ec 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #d7f9ec 68.08511%, #d7f9ec 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #d7f9ec 76.59574%, #d7f9ec 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #d7f9ec 85.10638%, #d7f9ec 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #d7f9ec 93.61702%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #d7f9ec 8.51064%, #d7f9ec 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #d7f9ec 17.02128%, #d7f9ec 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #d7f9ec 25.53191%, #d7f9ec 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #d7f9ec 34.04255%, #d7f9ec 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #d7f9ec 42.55319%, #d7f9ec 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #d7f9ec 51.06383%, #d7f9ec 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #d7f9ec 59.57447%, #d7f9ec 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #d7f9ec 68.08511%, #d7f9ec 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #d7f9ec 76.59574%, #d7f9ec 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #d7f9ec 85.10638%, #d7f9ec 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #d7f9ec 93.61702%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #d7f9ec 8.51064%, #d7f9ec 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #d7f9ec 17.02128%, #d7f9ec 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #d7f9ec 25.53191%, #d7f9ec 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #d7f9ec 34.04255%, #d7f9ec 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #d7f9ec 42.55319%, #d7f9ec 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #d7f9ec 51.06383%, #d7f9ec 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #d7f9ec 59.57447%, #d7f9ec 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #d7f9ec 68.08511%, #d7f9ec 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #d7f9ec 76.59574%, #d7f9ec 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #d7f9ec 85.10638%, #d7f9ec 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #d7f9ec 93.61702%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+
+/*bloc*/
+/* line 229, ../sass/doc.scss */
+#s6 {
+  *zoom: 1;
+  max-width: 1504px;
+  max-width: 94rem;
+  _width: 1504px;
+  padding-left: 32px;
+  padding-left: 2rem;
+  padding-right: 32px;
+  padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#s6:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 320px) {
+  /* line 230, ../sass/doc.scss */
+  #s6 article:hover {
+    max-width: 480px;
+    max-width: 30rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(20%, #d7f9ec), color-stop(20%, #ffffff), color-stop(26.66667%, #ffffff), color-stop(26.66667%, #d7f9ec), color-stop(46.66667%, #d7f9ec), color-stop(46.66667%, #ffffff), color-stop(53.33333%, #ffffff), color-stop(53.33333%, #d7f9ec), color-stop(73.33333%, #d7f9ec), color-stop(73.33333%, #ffffff), color-stop(80.0%, #ffffff), color-stop(80%, #d7f9ec), color-stop(100%, #d7f9ec), color-stop(100%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 20%, #ffffff 20%, #ffffff 26.66667%, #d7f9ec 26.66667%, #d7f9ec 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #d7f9ec 53.33333%, #d7f9ec 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #d7f9ec 80%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 20%, #ffffff 20%, #ffffff 26.66667%, #d7f9ec 26.66667%, #d7f9ec 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #d7f9ec 53.33333%, #d7f9ec 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #d7f9ec 80%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 20%, #ffffff 20%, #ffffff 26.66667%, #d7f9ec 26.66667%, #d7f9ec 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #d7f9ec 53.33333%, #d7f9ec 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #d7f9ec 80%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 20%, #ffffff 20%, #ffffff 26.66667%, #d7f9ec 26.66667%, #d7f9ec 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #d7f9ec 53.33333%, #d7f9ec 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #d7f9ec 80%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 230, ../sass/doc.scss */
+  #s6 article:hover {
+    max-width: 608px;
+    max-width: 38rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(15.78947%, #d7f9ec), color-stop(15.78947%, #ffffff), color-stop(21.05263%, #ffffff), color-stop(21.05263%, #d7f9ec), color-stop(36.84211%, #d7f9ec), color-stop(36.84211%, #ffffff), color-stop(42.10526%, #ffffff), color-stop(42.10526%, #d7f9ec), color-stop(57.89474%, #d7f9ec), color-stop(57.89474%, #ffffff), color-stop(63.15789%, #ffffff), color-stop(63.15789%, #d7f9ec), color-stop(78.94737%, #d7f9ec), color-stop(78.94737%, #ffffff), color-stop(84.21053%, #ffffff), color-stop(84.21053%, #d7f9ec), color-stop(100.0%, #d7f9ec), color-stop(100.0%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #d7f9ec 21.05263%, #d7f9ec 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #d7f9ec 42.10526%, #d7f9ec 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #d7f9ec 63.15789%, #d7f9ec 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #d7f9ec 84.21053%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #d7f9ec 21.05263%, #d7f9ec 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #d7f9ec 42.10526%, #d7f9ec 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #d7f9ec 63.15789%, #d7f9ec 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #d7f9ec 84.21053%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #d7f9ec 21.05263%, #d7f9ec 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #d7f9ec 42.10526%, #d7f9ec 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #d7f9ec 63.15789%, #d7f9ec 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #d7f9ec 84.21053%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #d7f9ec 21.05263%, #d7f9ec 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #d7f9ec 42.10526%, #d7f9ec 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #d7f9ec 63.15789%, #d7f9ec 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #d7f9ec 84.21053%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 230, ../sass/doc.scss */
+  #s6 article:hover {
+    max-width: 736px;
+    max-width: 46rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(13.04348%, #d7f9ec), color-stop(13.04348%, #ffffff), color-stop(17.3913%, #ffffff), color-stop(17.3913%, #d7f9ec), color-stop(30.43478%, #d7f9ec), color-stop(30.43478%, #ffffff), color-stop(34.78261%, #ffffff), color-stop(34.78261%, #d7f9ec), color-stop(47.82609%, #d7f9ec), color-stop(47.82609%, #ffffff), color-stop(52.17391%, #ffffff), color-stop(52.17391%, #d7f9ec), color-stop(65.21739%, #d7f9ec), color-stop(65.21739%, #ffffff), color-stop(69.56522%, #ffffff), color-stop(69.56522%, #d7f9ec), color-stop(82.6087%, #d7f9ec), color-stop(82.6087%, #ffffff), color-stop(86.95652%, #ffffff), color-stop(86.95652%, #d7f9ec), color-stop(100%, #d7f9ec), color-stop(100%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #d7f9ec 17.3913%, #d7f9ec 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #d7f9ec 34.78261%, #d7f9ec 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #d7f9ec 52.17391%, #d7f9ec 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #d7f9ec 69.56522%, #d7f9ec 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #d7f9ec 86.95652%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #d7f9ec 17.3913%, #d7f9ec 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #d7f9ec 34.78261%, #d7f9ec 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #d7f9ec 52.17391%, #d7f9ec 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #d7f9ec 69.56522%, #d7f9ec 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #d7f9ec 86.95652%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #d7f9ec 17.3913%, #d7f9ec 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #d7f9ec 34.78261%, #d7f9ec 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #d7f9ec 52.17391%, #d7f9ec 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #d7f9ec 69.56522%, #d7f9ec 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #d7f9ec 86.95652%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #d7f9ec 17.3913%, #d7f9ec 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #d7f9ec 34.78261%, #d7f9ec 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #d7f9ec 52.17391%, #d7f9ec 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #d7f9ec 69.56522%, #d7f9ec 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #d7f9ec 86.95652%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 569px) and (max-width: 767px) {
+  /* line 230, ../sass/doc.scss */
+  #s6 article:hover {
+    max-width: 992px;
+    max-width: 62rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(9.67742%, #d7f9ec), color-stop(9.67742%, #ffffff), color-stop(12.90323%, #ffffff), color-stop(12.90323%, #d7f9ec), color-stop(22.58065%, #d7f9ec), color-stop(22.58065%, #ffffff), color-stop(25.80645%, #ffffff), color-stop(25.80645%, #d7f9ec), color-stop(35.48387%, #d7f9ec), color-stop(35.48387%, #ffffff), color-stop(38.70968%, #ffffff), color-stop(38.70968%, #d7f9ec), color-stop(48.3871%, #d7f9ec), color-stop(48.3871%, #ffffff), color-stop(51.6129%, #ffffff), color-stop(51.6129%, #d7f9ec), color-stop(61.29032%, #d7f9ec), color-stop(61.29032%, #ffffff), color-stop(64.51613%, #ffffff), color-stop(64.51613%, #d7f9ec), color-stop(74.19355%, #d7f9ec), color-stop(74.19355%, #ffffff), color-stop(77.41935%, #ffffff), color-stop(77.41935%, #d7f9ec), color-stop(87.09677%, #d7f9ec), color-stop(87.09677%, #ffffff), color-stop(90.32258%, #ffffff), color-stop(90.32258%, #d7f9ec), color-stop(100.0%, #d7f9ec), color-stop(100.0%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #d7f9ec 12.90323%, #d7f9ec 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #d7f9ec 25.80645%, #d7f9ec 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #d7f9ec 38.70968%, #d7f9ec 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #d7f9ec 51.6129%, #d7f9ec 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #d7f9ec 64.51613%, #d7f9ec 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #d7f9ec 77.41935%, #d7f9ec 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #d7f9ec 90.32258%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #d7f9ec 12.90323%, #d7f9ec 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #d7f9ec 25.80645%, #d7f9ec 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #d7f9ec 38.70968%, #d7f9ec 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #d7f9ec 51.6129%, #d7f9ec 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #d7f9ec 64.51613%, #d7f9ec 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #d7f9ec 77.41935%, #d7f9ec 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #d7f9ec 90.32258%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #d7f9ec 12.90323%, #d7f9ec 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #d7f9ec 25.80645%, #d7f9ec 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #d7f9ec 38.70968%, #d7f9ec 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #d7f9ec 51.6129%, #d7f9ec 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #d7f9ec 64.51613%, #d7f9ec 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #d7f9ec 77.41935%, #d7f9ec 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #d7f9ec 90.32258%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #d7f9ec 12.90323%, #d7f9ec 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #d7f9ec 25.80645%, #d7f9ec 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #d7f9ec 38.70968%, #d7f9ec 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #d7f9ec 51.6129%, #d7f9ec 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #d7f9ec 64.51613%, #d7f9ec 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #d7f9ec 77.41935%, #d7f9ec 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #d7f9ec 90.32258%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 768px) and (max-width: 939px) {
+  /* line 230, ../sass/doc.scss */
+  #s6 article:hover {
+    max-width: 1376px;
+    max-width: 86rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(6.97674%, #d7f9ec), color-stop(6.97674%, #ffffff), color-stop(9.30233%, #ffffff), color-stop(9.30233%, #d7f9ec), color-stop(16.27907%, #d7f9ec), color-stop(16.27907%, #ffffff), color-stop(18.60465%, #ffffff), color-stop(18.60465%, #d7f9ec), color-stop(25.5814%, #d7f9ec), color-stop(25.5814%, #ffffff), color-stop(27.90698%, #ffffff), color-stop(27.90698%, #d7f9ec), color-stop(34.88372%, #d7f9ec), color-stop(34.88372%, #ffffff), color-stop(37.2093%, #ffffff), color-stop(37.2093%, #d7f9ec), color-stop(44.18605%, #d7f9ec), color-stop(44.18605%, #ffffff), color-stop(46.51163%, #ffffff), color-stop(46.51163%, #d7f9ec), color-stop(53.48837%, #d7f9ec), color-stop(53.48837%, #ffffff), color-stop(55.81395%, #ffffff), color-stop(55.81395%, #d7f9ec), color-stop(62.7907%, #d7f9ec), color-stop(62.7907%, #ffffff), color-stop(65.11628%, #ffffff), color-stop(65.11628%, #d7f9ec), color-stop(72.09302%, #d7f9ec), color-stop(72.09302%, #ffffff), color-stop(74.4186%, #ffffff), color-stop(74.4186%, #d7f9ec), color-stop(81.39535%, #d7f9ec), color-stop(81.39535%, #ffffff), color-stop(83.72093%, #ffffff), color-stop(83.72093%, #d7f9ec), color-stop(90.69767%, #d7f9ec), color-stop(90.69767%, #ffffff), color-stop(93.02326%, #ffffff), color-stop(93.02326%, #d7f9ec), color-stop(100.0%, #d7f9ec), color-stop(100.0%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #d7f9ec 9.30233%, #d7f9ec 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #d7f9ec 18.60465%, #d7f9ec 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #d7f9ec 27.90698%, #d7f9ec 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #d7f9ec 37.2093%, #d7f9ec 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #d7f9ec 46.51163%, #d7f9ec 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #d7f9ec 55.81395%, #d7f9ec 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #d7f9ec 65.11628%, #d7f9ec 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #d7f9ec 74.4186%, #d7f9ec 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #d7f9ec 83.72093%, #d7f9ec 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #d7f9ec 93.02326%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #d7f9ec 9.30233%, #d7f9ec 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #d7f9ec 18.60465%, #d7f9ec 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #d7f9ec 27.90698%, #d7f9ec 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #d7f9ec 37.2093%, #d7f9ec 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #d7f9ec 46.51163%, #d7f9ec 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #d7f9ec 55.81395%, #d7f9ec 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #d7f9ec 65.11628%, #d7f9ec 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #d7f9ec 74.4186%, #d7f9ec 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #d7f9ec 83.72093%, #d7f9ec 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #d7f9ec 93.02326%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #d7f9ec 9.30233%, #d7f9ec 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #d7f9ec 18.60465%, #d7f9ec 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #d7f9ec 27.90698%, #d7f9ec 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #d7f9ec 37.2093%, #d7f9ec 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #d7f9ec 46.51163%, #d7f9ec 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #d7f9ec 55.81395%, #d7f9ec 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #d7f9ec 65.11628%, #d7f9ec 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #d7f9ec 74.4186%, #d7f9ec 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #d7f9ec 83.72093%, #d7f9ec 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #d7f9ec 93.02326%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #d7f9ec 9.30233%, #d7f9ec 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #d7f9ec 18.60465%, #d7f9ec 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #d7f9ec 27.90698%, #d7f9ec 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #d7f9ec 37.2093%, #d7f9ec 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #d7f9ec 46.51163%, #d7f9ec 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #d7f9ec 55.81395%, #d7f9ec 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #d7f9ec 65.11628%, #d7f9ec 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #d7f9ec 74.4186%, #d7f9ec 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #d7f9ec 83.72093%, #d7f9ec 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #d7f9ec 93.02326%, #d7f9ec 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 940px) {
+  /* line 230, ../sass/doc.scss */
+  #s6 article:hover {
+    max-width: 1504px;
+    max-width: 94rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #d7f9ec), color-stop(6.38298%, #d7f9ec), color-stop(6.38298%, #ffffff), color-stop(8.51064%, #ffffff), color-stop(8.51064%, #d7f9ec), color-stop(14.89362%, #d7f9ec), color-stop(14.89362%, #ffffff), color-stop(17.02128%, #ffffff), color-stop(17.02128%, #d7f9ec), color-stop(23.40426%, #d7f9ec), color-stop(23.40426%, #ffffff), color-stop(25.53191%, #ffffff), color-stop(25.53191%, #d7f9ec), color-stop(31.91489%, #d7f9ec), color-stop(31.91489%, #ffffff), color-stop(34.04255%, #ffffff), color-stop(34.04255%, #d7f9ec), color-stop(40.42553%, #d7f9ec), color-stop(40.42553%, #ffffff), color-stop(42.55319%, #ffffff), color-stop(42.55319%, #d7f9ec), color-stop(48.93617%, #d7f9ec), color-stop(48.93617%, #ffffff), color-stop(51.06383%, #ffffff), color-stop(51.06383%, #d7f9ec), color-stop(57.44681%, #d7f9ec), color-stop(57.44681%, #ffffff), color-stop(59.57447%, #ffffff), color-stop(59.57447%, #d7f9ec), color-stop(65.95745%, #d7f9ec), color-stop(65.95745%, #ffffff), color-stop(68.08511%, #ffffff), color-stop(68.08511%, #d7f9ec), color-stop(74.46809%, #d7f9ec), color-stop(74.46809%, #ffffff), color-stop(76.59574%, #ffffff), color-stop(76.59574%, #d7f9ec), color-stop(82.97872%, #d7f9ec), color-stop(82.97872%, #ffffff), color-stop(85.10638%, #ffffff), color-stop(85.10638%, #d7f9ec), color-stop(91.48936%, #d7f9ec), color-stop(91.48936%, #ffffff), color-stop(93.61702%, #ffffff), color-stop(93.61702%, #d7f9ec), color-stop(100%, #d7f9ec), color-stop(100%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #d7f9ec 8.51064%, #d7f9ec 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #d7f9ec 17.02128%, #d7f9ec 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #d7f9ec 25.53191%, #d7f9ec 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #d7f9ec 34.04255%, #d7f9ec 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #d7f9ec 42.55319%, #d7f9ec 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #d7f9ec 51.06383%, #d7f9ec 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #d7f9ec 59.57447%, #d7f9ec 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #d7f9ec 68.08511%, #d7f9ec 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #d7f9ec 76.59574%, #d7f9ec 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #d7f9ec 85.10638%, #d7f9ec 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #d7f9ec 93.61702%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #d7f9ec 8.51064%, #d7f9ec 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #d7f9ec 17.02128%, #d7f9ec 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #d7f9ec 25.53191%, #d7f9ec 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #d7f9ec 34.04255%, #d7f9ec 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #d7f9ec 42.55319%, #d7f9ec 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #d7f9ec 51.06383%, #d7f9ec 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #d7f9ec 59.57447%, #d7f9ec 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #d7f9ec 68.08511%, #d7f9ec 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #d7f9ec 76.59574%, #d7f9ec 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #d7f9ec 85.10638%, #d7f9ec 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #d7f9ec 93.61702%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #d7f9ec 8.51064%, #d7f9ec 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #d7f9ec 17.02128%, #d7f9ec 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #d7f9ec 25.53191%, #d7f9ec 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #d7f9ec 34.04255%, #d7f9ec 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #d7f9ec 42.55319%, #d7f9ec 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #d7f9ec 51.06383%, #d7f9ec 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #d7f9ec 59.57447%, #d7f9ec 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #d7f9ec 68.08511%, #d7f9ec 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #d7f9ec 76.59574%, #d7f9ec 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #d7f9ec 85.10638%, #d7f9ec 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #d7f9ec 93.61702%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #d7f9ec 0%, #d7f9ec 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #d7f9ec 8.51064%, #d7f9ec 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #d7f9ec 17.02128%, #d7f9ec 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #d7f9ec 25.53191%, #d7f9ec 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #d7f9ec 34.04255%, #d7f9ec 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #d7f9ec 42.55319%, #d7f9ec 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #d7f9ec 51.06383%, #d7f9ec 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #d7f9ec 59.57447%, #d7f9ec 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #d7f9ec 68.08511%, #d7f9ec 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #d7f9ec 76.59574%, #d7f9ec 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #d7f9ec 85.10638%, #d7f9ec 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #d7f9ec 93.61702%, #d7f9ec 100%, #ffffff 100%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+/* line 231, ../sass/doc.scss */
+#s6 .bloc1 {
+  display: inline-block;
+}
+/* line 234, ../sass/doc.scss */
+#s6 .bloc1 .contingut {
+  background-color: #fff;
+}
+/* line 237, ../sass/doc.scss */
+#s6 .bloc2 {
+  display: inline-block;
+}
+/* line 239, ../sass/doc.scss */
+#s6 .bloc2 h2 {
+  background-color: #f0f7f9;
+  border-bottom-color: #fff;
+}
+/* line 240, ../sass/doc.scss */
+#s6 .bloc2 .contingut {
+  background-color: #f0f7f9;
+}
+/* line 241, ../sass/doc.scss */
+#s6 .bloc2 .contingut div.dipta-resum {
+  border-bottom-color: white !important;
+}
+/* line 244, ../sass/doc.scss */
+#s6 .bloc3 {
+  display: inline-block;
+}
+/* line 247, ../sass/doc.scss */
+#s6 .bloc3 .contingut {
+  background-color: #fff;
+}
+/* line 250, ../sass/doc.scss */
+#s6 .bloc4 {
+  display: inline-block;
+}
+/* line 252, ../sass/doc.scss */
+#s6 .bloc4 h2 {
+  background-color: #f0f7f9;
+  border-bottom-color: #fff;
+}
+/* line 253, ../sass/doc.scss */
+#s6 .bloc4 .contingut {
+  background-color: #f0f7f9;
+}
+/* line 254, ../sass/doc.scss */
+#s6 .bloc4 .contingut div.dipta-resum {
+  border-bottom-color: white !important;
+}
+
+/*Footter doc */
+/* line 261, ../sass/doc.scss */
+footer {
+  background-color: #0083a9;
+  margin: 15rem 0 0 0;
+  padding: 1rem 0;
+  color: #fff;
+  text-align: center;
+  border-bottom: solid 1rem #014b60;
+  border-top: solid 1rem #014b60;
+}
+/* line 262, ../sass/doc.scss */
+footer h1, footer h2, footer h3, footer h2.title-doc, footer h4, footer h5 {
+  margin: 0;
+}
+/* line 266, ../sass/doc.scss */
+footer h5 {
+  margin: 0;
+}
